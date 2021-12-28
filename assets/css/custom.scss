@@ -1,28 +1,24 @@
 @import 'colorpallete';
-@font-face {
-	font-family: Avenir;
-	src: url(/assets/fonts/Metropolis-Medium.otf);
-}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 
 body {
 	background-color: #ebf7fe;
-	font-family: Avenir;
+	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 }
 
-
 .page-content {
+	@media screen and (max-width: 1366px) {
+		margin: 40px 1em;
+		height: 100%;
+	}
 
-   @media screen and (max-width: 1366px) {
-      margin: 40px 1em;
-      height: 100%;
-    }
-
-   @media screen and (min-width: 768px) {
-      margin-top: 40px;
-      margin-left: 300px;
-      height: 100%;
-    }
+	@media screen and (min-width: 768px) {
+		margin-top: 40px;
+		margin-left: 300px;
+		height: 100%;
+	}
 
 	.header-greeting {
 		p {
@@ -34,19 +30,18 @@ body {
 		}
 	}
 
-   .stats {
-      color: $gray;
-      font-size: 14px;
-   }
+	.stats {
+		color: $gray;
+		font-size: 14px;
+	}
 
-   .num-count {
-      color: $black-soft-1;
-      font-size: 24px;
-      font-weight: 600;
-   }
+	.num-count {
+		color: $black-soft-1;
+		font-size: 24px;
+		font-weight: 600;
+	}
 
 	.stats-card {
-
 		.card {
 			height: 97px;
 			border: none;
@@ -72,50 +67,50 @@ body {
 				}
 			}
 
-         &:hover {
-            transition: 0.5s ease;
-            background-color: $pedia-color;
-            
+			&:hover {
+				transition: 0.5s ease;
+				background-color: $pedia-color;
+
 				.stats {
 					color: $gray-soft-2;
 					font-size: 14px;
 				}
 
-            .num-count {
+				.num-count {
 					color: $white;
 					font-size: 24px;
 					font-weight: 600;
 				}
 
-            cursor: pointer;
-         }
+				cursor: pointer;
+			}
 		}
 	}
 
-   .main-cart {
-      padding-right: 40px;
+	.main-cart {
+		padding-right: 40px;
 
-      .card {
-         width: 100%;
-         height: auto;
-         border: none;
-         border-radius: 1em;
+		.card {
+			width: 100%;
+			height: auto;
+			border: none;
+			border-radius: 1em;
 
-         .card-body {
-            padding: 2em;
+			.card-body {
+				padding: 2em;
 
-            .dropdown__ {
-               width: auto;
-            }
+				.dropdown__ {
+					width: auto;
+				}
 
-            .cart {
-               width: 100%;
+				.cart {
+					width: 100%;
 
-               img {
-                  width: 100%
-               };
-            }
-         }
-      }
-   }
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 }
