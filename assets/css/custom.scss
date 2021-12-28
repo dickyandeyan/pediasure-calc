@@ -1,0 +1,121 @@
+@import 'colorpallete';
+@font-face {
+	font-family: Avenir;
+	src: url(/assets/fonts/Metropolis-Medium.otf);
+}
+
+body {
+	background-color: #ebf7fe;
+	font-family: Avenir;
+	overflow: hidden;
+}
+
+
+.page-content {
+
+   @media screen and (max-width: 1366px) {
+      margin: 40px 1em;
+      height: 100%;
+    }
+
+   @media screen and (min-width: 768px) {
+      margin-top: 40px;
+      margin-left: 300px;
+      height: 100%;
+    }
+
+	.header-greeting {
+		p {
+			color: $black-soft-2;
+		}
+
+		h1 {
+			color: $black-soft-1;
+		}
+	}
+
+   .stats {
+      color: $gray;
+      font-size: 14px;
+   }
+
+   .num-count {
+      color: $black-soft-1;
+      font-size: 24px;
+      font-weight: 600;
+   }
+
+	.stats-card {
+
+		.card {
+			height: 97px;
+			border: none;
+			margin: 0 0 10px;
+			border-radius: 1em;
+
+			.card-body {
+				min-height: 97px;
+
+				.icon-holder {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					min-width: 56px;
+					height: 56px;
+					border-radius: 100%;
+					background-color: #f4f7fe;
+					margin-right: 1em;
+					i {
+						color: $blue;
+						font-size: 24px;
+					}
+				}
+			}
+
+         &:hover {
+            transition: 0.5s ease;
+            background-color: $pedia-color;
+            
+				.stats {
+					color: $gray-soft-2;
+					font-size: 14px;
+				}
+
+            .num-count {
+					color: $white;
+					font-size: 24px;
+					font-weight: 600;
+				}
+
+            cursor: pointer;
+         }
+		}
+	}
+
+   .main-cart {
+      padding-right: 40px;
+
+      .card {
+         width: 100%;
+         height: auto;
+         border: none;
+         border-radius: 1em;
+
+         .card-body {
+            padding: 2em;
+
+            .dropdown__ {
+               width: auto;
+            }
+
+            .cart {
+               width: 100%;
+
+               img {
+                  width: 100%
+               };
+            }
+         }
+      }
+   }
+}

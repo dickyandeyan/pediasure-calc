@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Avenir;
+  src: url(/assets/fonts/Metropolis-Medium.otf);
+}
+body {
+  background-color: #ebf7fe;
+  font-family: Avenir;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1366px) {
+  .page-content {
+    margin: 40px 1em;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-content {
+    margin-top: 40px;
+    margin-left: 300px;
+    height: 100%;
+  }
+}
+.page-content .header-greeting p {
+  color: #707eae;
+}
+.page-content .header-greeting h1 {
+  color: #2b3674;
+}
+.page-content .stats {
+  color: #93b0c8;
+  font-size: 14px;
+}
+.page-content .num-count {
+  color: #2b3674;
+  font-size: 24px;
+  font-weight: 600;
+}
+.page-content .stats-card .card {
+  height: 97px;
+  border: none;
+  margin: 0 0 10px;
+  border-radius: 1em;
+}
+.page-content .stats-card .card .card-body {
+  min-height: 97px;
+}
+.page-content .stats-card .card .card-body .icon-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  background-color: #f4f7fe;
+  margin-right: 1em;
+}
+.page-content .stats-card .card .card-body .icon-holder i {
+  color: #0075ff;
+  font-size: 24px;
+}
+.page-content .stats-card .card:hover {
+  transition: 0.5s ease;
+  background-color: #4d3180;
+  cursor: pointer;
+}
+.page-content .stats-card .card:hover .stats {
+  color: #e9edf7;
+  font-size: 14px;
+}
+.page-content .stats-card .card:hover .num-count {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.page-content .main-cart {
+  padding-right: 40px;
+}
+.page-content .main-cart .card {
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 1em;
+}
+.page-content .main-cart .card .card-body {
+  padding: 2em;
+}
+.page-content .main-cart .card .card-body .dropdown__ {
+  width: auto;
+}
+.page-content .main-cart .card .card-body .cart {
+  width: 100%;
+}
+.page-content .main-cart .card .card-body .cart img {
+  width: 100%;
+}/*# sourceMappingURL=custom.css.map */

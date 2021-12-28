@@ -1,0 +1,101 @@
+@import 'colorpallete';
+
+.nav-sidebar {
+	height: 100%;
+	width: 260px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #ffffff !important;
+	overflow-x: hidden;
+	padding-top: 16px;
+
+	.logo-container {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		img {
+			width: 168px;
+		}
+	}
+
+	.doc-profile {
+      margin: 10px 0 20px 30px;
+		padding-bottom: 1em;
+
+		.avatar-placeholder {
+			display: flex;
+			justify-content: end;
+			padding: 0;
+
+			img {
+				width: 45px;
+				height: 45px;
+			}
+		}
+
+		.doc-stats {
+			font-size: 14px;
+			color: $black-soft-1;
+			#name {
+				font-weight: bold;
+			}
+
+			#no-profesi {
+				font-weight: 400;
+			}
+		}
+	}
+
+	.menu-list {
+		padding-left: 50px;
+		height: auto;
+
+		.menu-head {
+			font-size: 12px;
+			color: $gray;
+			font-weight: 400;
+		}
+
+		.main-menu, .support-menu {
+         padding-bottom: 20px;
+
+			ul {
+				padding: 0;
+				list-style-type: none;
+
+				li {
+					padding: 10px 0;
+				}
+			}
+
+			a {
+				color: $gray;
+				font-weight: 400;
+				font-size: 14px;
+				text-decoration: none;
+
+				i {
+					margin-right: 15px;
+				}
+
+				&:hover {
+					transition: 0.5s ease;
+					color: $blue;
+				}
+			}
+		}
+
+	}
+   .sidebar-footer{
+      position: absolute;
+      bottom: 0;
+      padding: 2em;
+      font-size: 12px;
+      font-weight: 600;
+      border-top: 1px solid $gray;
+      color: #2b3674;
+   }
+}
