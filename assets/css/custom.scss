@@ -1,11 +1,82 @@
 @import 'colorpallete';
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-
 body {
 	background-color: #ebf7fe;
 	font-family: 'Montserrat', sans-serif;
-	overflow: hidden;
+	overflow-x: hidden;
+}
+
+#login {
+	min-height: 100vh;
+
+	.login-upper {
+		min-height: 50vh;
+		color: $white;
+		background: $pedia-color;
+
+		.wrap-desc {
+			padding: 5em 0;
+			width: 350px;
+		}
+
+		h5 {
+			margin-top: 3rem;
+		}
+	}
+
+	.login-card {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		.card {
+			@media screen and (min-width: 768px) {
+				margin-top: -220px;
+			}
+
+			margin-top: -200px;
+			width: 450px;
+			height: auto;
+			border-radius: 8px;
+			border: none;
+
+			#login-form {
+				color: $gray;
+				label {
+					margin-bottom: 5px;
+				}
+				input {
+					border-radius: 8px;
+				}
+
+				a {
+					color: $black-soft-1;
+				}
+
+				.link-pass {
+					font-size: 14px;
+				}
+
+				.btn-login-action {
+					background: $pedia-color;
+					border-radius: 5em;
+					padding: 10px 0;
+					color: $white;
+					font-weight: bold;
+
+					&:hover {
+						background: #2d1a49;
+						transition: 0.5s ease;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		font-weight: 500;
+		color: $black-soft-1;
+	}
 }
 
 .page-content {
@@ -47,6 +118,7 @@ body {
 			border: none;
 			margin: 0 0 10px;
 			border-radius: 1em;
+			width: auto;
 
 			.card-body {
 				min-height: 97px;
@@ -87,8 +159,14 @@ body {
 		}
 	}
 
-	.main-cart {
-		padding-right: 40px;
+	.main-chart {
+		@media screen and (max-width: 768px) {
+			margin-top: 40px;
+		}
+
+		@media screen and (min-width: 1366px) {
+			padding-right: 40px;
+		}
 
 		.card {
 			width: 100%;
@@ -103,9 +181,17 @@ body {
 					width: auto;
 				}
 
-				.cart {
+				.chart {
+					border-top: 3px dashed $blue-dark;
 					width: 100%;
-
+					position: relative;
+					&::after {
+						content: '179';
+						color: $blue-dark;
+						font-weight: 700;
+						position: absolute;
+						top: -12px;
+					}
 					img {
 						width: 100%;
 					}

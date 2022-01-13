@@ -41,7 +41,6 @@
   font-weight: 400;
 }
 .nav-sidebar .menu-list {
-  padding-left: 50px;
   height: auto;
 }
 .nav-sidebar .menu-list .menu-head {
@@ -57,7 +56,7 @@
   list-style-type: none;
 }
 .nav-sidebar .menu-list .main-menu ul li, .nav-sidebar .menu-list .support-menu ul li {
-  padding: 10px 0;
+  padding: 20px 20px;
 }
 .nav-sidebar .menu-list .main-menu a, .nav-sidebar .menu-list .support-menu a {
   color: #93b0c8;
@@ -71,6 +70,16 @@
 .nav-sidebar .menu-list .main-menu a:hover, .nav-sidebar .menu-list .support-menu a:hover {
   transition: 0.5s ease;
   color: #0075ff;
+}
+.nav-sidebar .menu-list .menu:hover {
+  background: linear-gradient(to left, #ffffff, #4d3180);
+  transition: 0.5s ease;
+  cursor: pointer;
+  color: #fff;
+}
+.nav-sidebar .menu-list .active {
+  background: linear-gradient(to left, #ffffff, #4d3180);
+  color: #ffffff;
 }
 .nav-sidebar .sidebar-footer {
   position: absolute;
