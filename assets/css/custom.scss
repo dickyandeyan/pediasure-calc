@@ -7,76 +7,86 @@ body {
 	overflow-x: hidden;
 }
 
-#login {
-	min-height: 100vh;
+#login-page {
+	.login-top {
+		max-height: 50vh;
+		background-color: $pedia-color;
+      background-position-y: top;
+	}
 
-	.login-upper {
-		min-height: 50vh;
-		color: $white;
-		background: $pedia-color;
-
-		.wrap-desc {
-			padding: 5em 0;
-			width: 350px;
-		}
-
-		h5 {
-			margin-top: 3rem;
-		}
+	.main-logo-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 12rem;
+      padding-top: 5em;
 	}
 
 	.login-card {
 		display: flex;
-		justify-content: center;
 		width: 100%;
 
 		.card {
-			@media screen and (min-width: 768px) {
-				margin-top: -220px;
+			width: 450px;
+			border-radius: 10px;
+
+			.btn-fb {
+				color: $white;
+				background-color: $black-soft-1;
+
+				&:hover {
+					background-color: #0c083b;
+				}
 			}
 
-			margin-top: -200px;
-			width: 450px;
-			height: auto;
-			border-radius: 8px;
-			border: none;
+			.btn-main-login {
+				background-color: $pedia-color;
+				color: $white;
+				font-weight: 600;
+				border-radius: 3rem;
+            letter-spacing: 2px;
 
-			#login-form {
-				color: $gray;
-				label {
-					margin-bottom: 5px;
+				&:hover {
+					background-color: #221241;
 				}
-				input {
-					border-radius: 8px;
+			}
+
+			.separator {
+				padding: 2.5em 0;
+				position: relative;
+
+				.line {
+					position: absolute;
+					border: 1px solid #d3d3d3;
+					width: 100%;
+					top: 50%;
 				}
 
-				a {
-					color: $black-soft-1;
+				.separator-text {
+					position: absolute;
+					z-index: 1;
+					padding: 0 15px;
+					top: 35%;
+					left: 45%;
 				}
-
-				.link-pass {
-					font-size: 14px;
-				}
-
-				.btn-login-action {
-					background: $pedia-color;
-					border-radius: 5em;
-					padding: 10px 0;
-					color: $white;
-					font-weight: bold;
-
-					&:hover {
-						background: #2d1a49;
-						transition: 0.5s ease;
-					}
-				}
+			}
+			form#login-form
+			{
+				font-size: 14px;
+				font-weight: 500;
+            color: $black-soft-1;
+            
+            a{
+               color: $black-soft-1;
+               text-decoration: none;
+            }
 			}
 		}
 	}
-	footer {
-		font-weight: 500;
-		color: $black-soft-1;
-	}
+   footer {
+      color: $black-soft-1;
+   }
 }
 
 .page-content {

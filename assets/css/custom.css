@@ -5,66 +5,71 @@ body {
   overflow-x: hidden;
 }
 
-#login {
-  min-height: 100vh;
+#login-page .login-top {
+  max-height: 50vh;
+  background-color: #4d3180;
+  background-position-y: top;
 }
-#login .login-upper {
-  min-height: 50vh;
-  color: #ffffff;
-  background: #4d3180;
-}
-#login .login-upper .wrap-desc {
-  padding: 5em 0;
-  width: 350px;
-}
-#login .login-upper h5 {
-  margin-top: 3rem;
-}
-#login .login-card {
+#login-page .main-logo-title {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
+  height: 12rem;
+  padding-top: 5em;
 }
-#login .login-card .card {
-  margin-top: -200px;
+#login-page .login-card {
+  display: flex;
+  width: 100%;
+}
+#login-page .login-card .card {
   width: 450px;
-  height: auto;
-  border-radius: 8px;
-  border: none;
+  border-radius: 10px;
 }
-@media screen and (min-width: 768px) {
-  #login .login-card .card {
-    margin-top: -220px;
-  }
+#login-page .login-card .card .btn-fb {
+  color: #ffffff;
+  background-color: #2b3674;
 }
-#login .login-card .card #login-form {
-  color: #93b0c8;
+#login-page .login-card .card .btn-fb:hover {
+  background-color: #0c083b;
 }
-#login .login-card .card #login-form label {
-  margin-bottom: 5px;
+#login-page .login-card .card .btn-main-login {
+  background-color: #4d3180;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 3rem;
+  letter-spacing: 2px;
 }
-#login .login-card .card #login-form input {
-  border-radius: 8px;
+#login-page .login-card .card .btn-main-login:hover {
+  background-color: #221241;
 }
-#login .login-card .card #login-form a {
+#login-page .login-card .card .separator {
+  padding: 2.5em 0;
+  position: relative;
+}
+#login-page .login-card .card .separator .line {
+  position: absolute;
+  border: 1px solid #d3d3d3;
+  width: 100%;
+  top: 50%;
+}
+#login-page .login-card .card .separator .separator-text {
+  position: absolute;
+  z-index: 1;
+  padding: 0 15px;
+  top: 35%;
+  left: 45%;
+}
+#login-page .login-card .card form#login-form {
+  font-size: 14px;
+  font-weight: 500;
   color: #2b3674;
 }
-#login .login-card .card #login-form .link-pass {
-  font-size: 14px;
+#login-page .login-card .card form#login-form a {
+  color: #2b3674;
+  text-decoration: none;
 }
-#login .login-card .card #login-form .btn-login-action {
-  background: #4d3180;
-  border-radius: 5em;
-  padding: 10px 0;
-  color: #ffffff;
-  font-weight: bold;
-}
-#login .login-card .card #login-form .btn-login-action:hover {
-  background: #2d1a49;
-  transition: 0.5s ease;
-}
-#login footer {
-  font-weight: 500;
+#login-page footer {
   color: #2b3674;
 }
 
