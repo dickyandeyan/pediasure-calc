@@ -7,6 +7,19 @@ body {
 	overflow-x: hidden;
 }
 
+.btn-main {
+   background-color: $pedia-color;
+   color: $white;
+   font-weight: 600;
+   border-radius: 3rem;
+   letter-spacing: 2px;
+
+   &:hover {
+      background-color: #221241;
+      color: $white
+   }
+}
+
 #login-page {
 	.login-top {
 		max-height: 50vh;
@@ -53,6 +66,18 @@ body {
 				}
 			}
 
+			.btn-done-register {
+				background-color: $black-soft-2;
+				color: $white;
+				font-weight: 600;
+				border-radius: 3rem;
+				letter-spacing: 2px;
+
+				&:hover {
+					background-color: #1a2357;
+				}
+			}
+
 			.separator {
 				padding: 2.5em 0;
 				position: relative;
@@ -77,15 +102,15 @@ body {
 				font-weight: 500;
 				color: $black-soft-1;
 
-            input{
-               border-radius: 8px;
-               padding: 10px;
-               border: 1px solid #e6e6e6;
+				input {
+					border-radius: 8px;
+					padding: 10px;
+					border: 1px solid #e6e6e6;
 
-               &:focus {
-                  background-color: #ececec;
-               }
-            }
+					&:focus {
+						background-color: #ececec;
+					}
+				}
 
 				a {
 					color: $black-soft-1;
@@ -219,4 +244,40 @@ body {
 			}
 		}
 	}
+}
+
+#main-calc {
+	background: #fff;
+
+	h1 {
+		color: $black-soft-1;
+		font-weight: 600;
+	}
+
+   input {
+      padding: 12px;
+      border-radius: 8px;
+   }
+
+   label {
+      font-weight: 600;
+      color: $black-soft-1;
+   }
+
+	.search-input {
+		position: relative;
+
+      input[type="text"] {
+         padding: 12px 40px;
+      }
+
+		i {
+			position: absolute;
+			left: 15px;
+			top: 18px;
+			color: $black-soft-1;
+		}
+	}
+
+
 }

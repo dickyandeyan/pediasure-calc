@@ -5,6 +5,18 @@ body {
   overflow-x: hidden;
 }
 
+.btn-main {
+  background-color: #4d3180;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 3rem;
+  letter-spacing: 2px;
+}
+.btn-main:hover {
+  background-color: #221241;
+  color: #ffffff;
+}
+
 #login-page .login-top {
   max-height: 50vh;
   background-color: #4d3180;
@@ -43,6 +55,16 @@ body {
 }
 #login-page .login-card .card .btn-main-login:hover {
   background-color: #221241;
+}
+#login-page .login-card .card .btn-done-register {
+  background-color: #707eae;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 3rem;
+  letter-spacing: 2px;
+}
+#login-page .login-card .card .btn-done-register:hover {
+  background-color: #1a2357;
 }
 #login-page .login-card .card .separator {
   padding: 2.5em 0;
@@ -184,4 +206,32 @@ body {
 }
 .page-content .main-chart .card .card-body .chart img {
   width: 100%;
+}
+
+#main-calc {
+  background: #fff;
+}
+#main-calc h1 {
+  color: #2b3674;
+  font-weight: 600;
+}
+#main-calc input {
+  padding: 12px;
+  border-radius: 8px;
+}
+#main-calc label {
+  font-weight: 600;
+  color: #2b3674;
+}
+#main-calc .search-input {
+  position: relative;
+}
+#main-calc .search-input input[type=text] {
+  padding: 12px 40px;
+}
+#main-calc .search-input i {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  color: #2b3674;
 }/*# sourceMappingURL=custom.css.map */
