@@ -25,6 +25,7 @@ body {
 #login-page .login-card .card {
   width: 450px;
   border-radius: 10px;
+  border: none;
 }
 #login-page .login-card .card .btn-fb {
   color: #ffffff;
@@ -64,6 +65,14 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: #2b3674;
+}
+#login-page .login-card .card form#login-form input {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+}
+#login-page .login-card .card form#login-form input:focus {
+  background-color: #ececec;
 }
 #login-page .login-card .card form#login-form a {
   color: #2b3674;

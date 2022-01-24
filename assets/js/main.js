@@ -1,4 +1,4 @@
-;(async () => {
+(() => {
 	const month = [
 		'Jan',
 		'Feb',
