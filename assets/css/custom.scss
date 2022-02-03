@@ -6,6 +6,24 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
 }
+.title-text {
+   color: $black-soft-1;
+}
+.search-input {
+   position: relative;
+
+   input[type="text"] {
+      padding: 12px 40px;
+      border: 1px solid $gray-soft-1;
+   }
+
+   i {
+      position: absolute;
+      left: 15px;
+      top: 18px;
+      color: $black-soft-1;
+   }
+}
 
 .btn-main {
    background-color: $pedia-color;
@@ -13,6 +31,19 @@ body {
    font-weight: 600;
    border-radius: 3rem;
    letter-spacing: 2px;
+
+   &:hover {
+      background-color: #221241;
+      color: $white
+   }
+}
+
+.btn-add-main {
+   background-color: $pedia-color;
+   color: $white;
+   border-radius: 3rem;
+   padding: 1em;
+   font-size: 12px;
 
    &:hover {
       background-color: #221241;
@@ -244,6 +275,72 @@ body {
 			}
 		}
 	}
+
+   .patient-card {
+      .card {
+         border: none !important;
+         min-height: 500px;
+         padding: 1em;
+         border-radius: 8px;
+      }
+
+      .table-responsive {
+         border-top: 1px solid $gray-soft-1;
+         
+         table {
+            font-size: 12px;
+            font-weight: 500;
+           th, td{
+              color: $pedia-color;
+           }
+         }
+
+         .btn-edit {
+            background-color: $green;
+            color: $white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 12px;
+
+            &:hover {
+               transition: 0.5s ease;
+               background-color: #239c21;
+            }
+         }
+
+         .btn-delete {
+            background-color: $red;
+            color: $white;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 12px;
+
+            &:hover {
+               transition: 0.5s ease;
+               background-color: #913030;
+            }
+         }
+      }
+   }
+}
+
+#modalPatient {
+
+   .modal-content {
+      border-radius: 18px;
+      border: none;
+   }
+
+   input, select {
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid $gray-soft-1;
+   }
+   
+   label {
+      font-weight: 500;
+      color: $black-soft-1;
+   }
 }
 
 #main-calc {
@@ -263,21 +360,6 @@ body {
       font-weight: 600;
       color: $black-soft-1;
    }
-
-	.search-input {
-		position: relative;
-
-      input[type="text"] {
-         padding: 12px 40px;
-      }
-
-		i {
-			position: absolute;
-			left: 15px;
-			top: 18px;
-			color: $black-soft-1;
-		}
-	}
-
-
 }
+
+

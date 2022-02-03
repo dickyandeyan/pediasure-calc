@@ -5,6 +5,24 @@ body {
   overflow-x: hidden;
 }
 
+.title-text {
+  color: #2b3674;
+}
+
+.search-input {
+  position: relative;
+}
+.search-input input[type=text] {
+  padding: 12px 40px;
+  border: 1px solid #e4e4e4;
+}
+.search-input i {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  color: #2b3674;
+}
+
 .btn-main {
   background-color: #4d3180;
   color: #ffffff;
@@ -13,6 +31,18 @@ body {
   letter-spacing: 2px;
 }
 .btn-main:hover {
+  background-color: #221241;
+  color: #ffffff;
+}
+
+.btn-add-main {
+  background-color: #4d3180;
+  color: #ffffff;
+  border-radius: 3rem;
+  padding: 1em;
+  font-size: 12px;
+}
+.btn-add-main:hover {
   background-color: #221241;
   color: #ffffff;
 }
@@ -207,6 +237,58 @@ body {
 .page-content .main-chart .card .card-body .chart img {
   width: 100%;
 }
+.page-content .patient-card .card {
+  border: none !important;
+  min-height: 500px;
+  padding: 1em;
+  border-radius: 8px;
+}
+.page-content .patient-card .table-responsive {
+  border-top: 1px solid #e4e4e4;
+}
+.page-content .patient-card .table-responsive table {
+  font-size: 12px;
+  font-weight: 500;
+}
+.page-content .patient-card .table-responsive table th, .page-content .patient-card .table-responsive table td {
+  color: #4d3180;
+}
+.page-content .patient-card .table-responsive .btn-edit {
+  background-color: #26d922;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.page-content .patient-card .table-responsive .btn-edit:hover {
+  transition: 0.5s ease;
+  background-color: #239c21;
+}
+.page-content .patient-card .table-responsive .btn-delete {
+  background-color: #eb5757;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.page-content .patient-card .table-responsive .btn-delete:hover {
+  transition: 0.5s ease;
+  background-color: #913030;
+}
+
+#modalPatient .modal-content {
+  border-radius: 18px;
+  border: none;
+}
+#modalPatient input, #modalPatient select {
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #e4e4e4;
+}
+#modalPatient label {
+  font-weight: 500;
+  color: #2b3674;
+}
 
 #main-calc {
   background: #fff;
@@ -221,17 +303,5 @@ body {
 }
 #main-calc label {
   font-weight: 600;
-  color: #2b3674;
-}
-#main-calc .search-input {
-  position: relative;
-}
-#main-calc .search-input input[type=text] {
-  padding: 12px 40px;
-}
-#main-calc .search-input i {
-  position: absolute;
-  left: 15px;
-  top: 18px;
   color: #2b3674;
 }/*# sourceMappingURL=custom.css.map */
