@@ -1,5 +1,24 @@
 @import 'colorpallete';
-
+/* width */
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: $gray-soft-1; 
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    transition: 0.5s ease-in-out;
+   background: $pedia-color; 
+ }
 .nav-sidebar {
 	height: 100%;
 	width: 260px;
@@ -95,6 +114,8 @@
          }
       }
       .active {
+         transition: 0.5s ease;
+         border-left: 4px solid $black-soft-1;
          background: linear-gradient(to left,$white, $pedia-color);
          color: $white;
       }

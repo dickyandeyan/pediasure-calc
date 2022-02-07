@@ -12,8 +12,8 @@ body {
 .search-input {
   position: relative;
 }
-.search-input input[type=text] {
-  padding: 12px 40px;
+.search-input input {
+  padding: 12px 50px;
   border: 1px solid #e4e4e4;
 }
 .search-input i {
@@ -144,6 +144,7 @@ body {
   .page-content {
     margin-top: 40px;
     margin-left: 300px;
+    margin-right: 100px;
     height: 100%;
   }
 }
@@ -290,18 +291,53 @@ body {
   color: #2b3674;
 }
 
-#main-calc {
+.calc-wrapper {
   background: #fff;
+  border-radius: 8px;
 }
-#main-calc h1 {
+.calc-wrapper h3 {
   color: #2b3674;
   font-weight: 600;
 }
-#main-calc input {
+.calc-wrapper input {
   padding: 12px;
   border-radius: 8px;
 }
-#main-calc label {
+.calc-wrapper input#patient-search {
+  padding-left: 40px;
+}
+.calc-wrapper label {
   font-weight: 600;
   color: #2b3674;
+}
+
+#video-page .video-wrapper .video-card {
+  background-color: #ffffff;
+  max-height: 300px;
+  border-radius: 8px;
+}
+#video-page .video-wrapper .video-card .thumbnail-video {
+  width: 100%;
+  border-radius: 8px;
+}
+#video-page .video-wrapper .video-card .thumbnail-video img {
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#video-page .video-wrapper .video-card .video-desc .video-duration {
+  background: #e9edf7;
+  color: #2b3674;
+  font-size: 10px;
+  font-weight: 600;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+}
+#video-page .video-wrapper .video-card .video-desc .video-title {
+  color: #2b3674;
+  font-size: 12px;
+  font-weight: 700;
+  max-height: 55px;
 }/*# sourceMappingURL=custom.css.map */

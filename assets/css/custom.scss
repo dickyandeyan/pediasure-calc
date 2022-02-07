@@ -12,8 +12,8 @@ body {
 .search-input {
    position: relative;
 
-   input[type="text"] {
-      padding: 12px 40px;
+   input {
+      padding: 12px 50px;
       border: 1px solid $gray-soft-1;
    }
 
@@ -164,6 +164,7 @@ body {
 	@media screen and (min-width: 768px) {
 		margin-top: 40px;
 		margin-left: 300px;
+		margin-right: 100px;
 		height: 100%;
 	}
 
@@ -331,7 +332,8 @@ body {
       border: none;
    }
 
-   input, select {
+   input, select
+    {
       border-radius: 8px;
       padding: 10px;
       border: 1px solid $gray-soft-1;
@@ -343,10 +345,11 @@ body {
    }
 }
 
-#main-calc {
+.calc-wrapper {
 	background: #fff;
+   border-radius: 8px;
 
-	h1 {
+	h3 {
 		color: $black-soft-1;
 		font-weight: 600;
 	}
@@ -356,9 +359,54 @@ body {
       border-radius: 8px;
    }
 
+   input#patient-search {
+      padding-left: 40px;
+   }
+
+
    label {
       font-weight: 600;
       color: $black-soft-1;
+   }
+}
+
+#video-page {
+   .video-wrapper {
+
+      .video-card {
+         background-color: $white;
+         max-height: 300px;
+         border-radius: 8px;
+
+         .thumbnail-video {
+            width: 100%;
+            border-radius: 8px;
+
+            img {
+               width: 100%;
+               border-top-left-radius: 8px;
+               border-top-right-radius: 8px;
+            }
+         }
+
+         .video-desc {
+            .video-duration {
+               background: $gray-soft-2;
+               color: $black-soft-1;
+               font-size: 10px;
+               font-weight: 600;
+               width: fit-content;
+               border-radius: 4px;
+            }
+
+            .video-title {
+               color: $black-soft-1;
+               font-size: 12px;
+               font-weight: 700;
+               max-height: 55px;
+            }
+         }
+      }
    }
 }
 
