@@ -134,18 +134,12 @@ body {
   color: #2b3674;
 }
 
-@media screen and (max-width: 1366px) {
-  .page-content {
-    margin: 40px 1em;
-    height: 100%;
-  }
+.page-content {
+  margin: 40px 10px;
 }
 @media screen and (min-width: 768px) {
   .page-content {
-    margin-top: 40px;
-    margin-left: 300px;
-    margin-right: 100px;
-    height: 100%;
+    margin: 40px 20px 0 300px;
   }
 }
 .page-content .header-greeting p {
@@ -251,7 +245,8 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
-.page-content .patient-card .table-responsive table th, .page-content .patient-card .table-responsive table td {
+.page-content .patient-card .table-responsive table th,
+.page-content .patient-card .table-responsive table td {
   color: #4d3180;
 }
 .page-content .patient-card .table-responsive .btn-edit {
@@ -281,7 +276,8 @@ body {
   border-radius: 18px;
   border: none;
 }
-#modalPatient input, #modalPatient select {
+#modalPatient input,
+#modalPatient select {
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #e4e4e4;
@@ -313,7 +309,7 @@ body {
 
 #video-page .video-wrapper .video-card {
   background-color: #ffffff;
-  max-height: 300px;
+  height: auto;
   border-radius: 8px;
 }
 #video-page .video-wrapper .video-card .thumbnail-video {
@@ -337,7 +333,8 @@ body {
 }
 #video-page .video-wrapper .video-card .video-desc .video-title {
   color: #2b3674;
-  font-size: 12px;
+  font-size: 0.7em;
   font-weight: 700;
-  max-height: 55px;
+  max-height: 75px;
+  overflow: hidden;
 }/*# sourceMappingURL=custom.css.map */

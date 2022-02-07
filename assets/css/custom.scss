@@ -7,48 +7,48 @@ body {
 	overflow-x: hidden;
 }
 .title-text {
-   color: $black-soft-1;
+	color: $black-soft-1;
 }
 .search-input {
-   position: relative;
+	position: relative;
 
-   input {
-      padding: 12px 50px;
-      border: 1px solid $gray-soft-1;
-   }
+	input {
+		padding: 12px 50px;
+		border: 1px solid $gray-soft-1;
+	}
 
-   i {
-      position: absolute;
-      left: 15px;
-      top: 18px;
-      color: $black-soft-1;
-   }
+	i {
+		position: absolute;
+		left: 15px;
+		top: 18px;
+		color: $black-soft-1;
+	}
 }
 
 .btn-main {
-   background-color: $pedia-color;
-   color: $white;
-   font-weight: 600;
-   border-radius: 3rem;
-   letter-spacing: 2px;
+	background-color: $pedia-color;
+	color: $white;
+	font-weight: 600;
+	border-radius: 3rem;
+	letter-spacing: 2px;
 
-   &:hover {
-      background-color: #221241;
-      color: $white
-   }
+	&:hover {
+		background-color: #221241;
+		color: $white;
+	}
 }
 
 .btn-add-main {
-   background-color: $pedia-color;
-   color: $white;
-   border-radius: 3rem;
-   padding: 1em;
-   font-size: 12px;
+	background-color: $pedia-color;
+	color: $white;
+	border-radius: 3rem;
+	padding: 1em;
+	font-size: 12px;
 
-   &:hover {
-      background-color: #221241;
-      color: $white
-   }
+	&:hover {
+		background-color: #221241;
+		color: $white;
+	}
 }
 
 #login-page {
@@ -156,16 +156,10 @@ body {
 }
 
 .page-content {
-	@media screen and (max-width: 1366px) {
-		margin: 40px 1em;
-		height: 100%;
-	}
+   margin: 40px 10px;
 
 	@media screen and (min-width: 768px) {
-		margin-top: 40px;
-		margin-left: 300px;
-		margin-right: 100px;
-		height: 100%;
+      margin: 40px 20px 0 300px;
 	}
 
 	.header-greeting {
@@ -277,137 +271,134 @@ body {
 		}
 	}
 
-   .patient-card {
-      .card {
-         border: none !important;
-         min-height: 500px;
-         padding: 1em;
-         border-radius: 8px;
-      }
+	.patient-card {
+		.card {
+			border: none !important;
+			min-height: 500px;
+			padding: 1em;
+			border-radius: 8px;
+		}
 
-      .table-responsive {
-         border-top: 1px solid $gray-soft-1;
-         
-         table {
-            font-size: 12px;
-            font-weight: 500;
-           th, td{
-              color: $pedia-color;
-           }
-         }
+		.table-responsive {
+			border-top: 1px solid $gray-soft-1;
 
-         .btn-edit {
-            background-color: $green;
-            color: $white;
-            border-radius: 25px;
-            padding: 10px 20px;
-            font-size: 12px;
+			table {
+				font-size: 12px;
+				font-weight: 500;
+				th,
+				td {
+					color: $pedia-color;
+				}
+			}
 
-            &:hover {
-               transition: 0.5s ease;
-               background-color: #239c21;
-            }
-         }
+			.btn-edit {
+				background-color: $green;
+				color: $white;
+				border-radius: 25px;
+				padding: 10px 20px;
+				font-size: 12px;
 
-         .btn-delete {
-            background-color: $red;
-            color: $white;
-            border-radius: 25px;
-            padding: 10px 20px;
-            font-size: 12px;
+				&:hover {
+					transition: 0.5s ease;
+					background-color: #239c21;
+				}
+			}
 
-            &:hover {
-               transition: 0.5s ease;
-               background-color: #913030;
-            }
-         }
-      }
-   }
+			.btn-delete {
+				background-color: $red;
+				color: $white;
+				border-radius: 25px;
+				padding: 10px 20px;
+				font-size: 12px;
+
+				&:hover {
+					transition: 0.5s ease;
+					background-color: #913030;
+				}
+			}
+		}
+	}
 }
 
 #modalPatient {
+	.modal-content {
+		border-radius: 18px;
+		border: none;
+	}
 
-   .modal-content {
-      border-radius: 18px;
-      border: none;
-   }
+	input,
+	select {
+		border-radius: 8px;
+		padding: 10px;
+		border: 1px solid $gray-soft-1;
+	}
 
-   input, select
-    {
-      border-radius: 8px;
-      padding: 10px;
-      border: 1px solid $gray-soft-1;
-   }
-   
-   label {
-      font-weight: 500;
-      color: $black-soft-1;
-   }
+	label {
+		font-weight: 500;
+		color: $black-soft-1;
+	}
 }
 
 .calc-wrapper {
 	background: #fff;
-   border-radius: 8px;
+	border-radius: 8px;
 
 	h3 {
 		color: $black-soft-1;
 		font-weight: 600;
 	}
 
-   input {
-      padding: 12px;
-      border-radius: 8px;
-   }
+	input {
+		padding: 12px;
+		border-radius: 8px;
+	}
 
-   input#patient-search {
-      padding-left: 40px;
-   }
+	input#patient-search {
+		padding-left: 40px;
+	}
 
-
-   label {
-      font-weight: 600;
-      color: $black-soft-1;
-   }
+	label {
+		font-weight: 600;
+		color: $black-soft-1;
+	}
 }
 
 #video-page {
-   .video-wrapper {
+	.video-wrapper {
+		.video-card {
+			background-color: $white;
+			height: auto;
+			border-radius: 8px;
 
-      .video-card {
-         background-color: $white;
-         max-height: 300px;
-         border-radius: 8px;
+			.thumbnail-video {
+				width: 100%;
+				border-radius: 8px;
 
-         .thumbnail-video {
-            width: 100%;
-            border-radius: 8px;
+				img {
+					width: 100%;
+					border-top-left-radius: 8px;
+					border-top-right-radius: 8px;
+				}
+			}
 
-            img {
-               width: 100%;
-               border-top-left-radius: 8px;
-               border-top-right-radius: 8px;
-            }
-         }
+			.video-desc {
+				.video-duration {
+					background: $gray-soft-2;
+					color: $black-soft-1;
+					font-size: 10px;
+					font-weight: 600;
+					width: fit-content;
+					border-radius: 4px;
+				}
 
-         .video-desc {
-            .video-duration {
-               background: $gray-soft-2;
-               color: $black-soft-1;
-               font-size: 10px;
-               font-weight: 600;
-               width: fit-content;
-               border-radius: 4px;
-            }
-
-            .video-title {
-               color: $black-soft-1;
-               font-size: 12px;
-               font-weight: 700;
-               max-height: 55px;
-            }
-         }
-      }
-   }
+				.video-title {
+					color: $black-soft-1;
+					font-size: 0.7em;
+					font-weight: 700;
+					max-height: 75px;
+               overflow: hidden;
+				}
+			}
+		}
+	}
 }
-
-
