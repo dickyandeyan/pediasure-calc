@@ -15,6 +15,7 @@ body {
 .search-input input {
   padding: 12px 50px;
   border: 1px solid #e4e4e4;
+  border-radius: 8px;
 }
 .search-input i {
   position: absolute;
@@ -32,6 +33,18 @@ body {
 }
 .btn-main:hover {
   background-color: #221241;
+  color: #ffffff;
+}
+
+.btn-edit {
+  background-color: #93b0c8;
+  color: #ffffff;
+  border-radius: 3rem;
+  padding: 1em;
+  font-size: 12px;
+}
+.btn-edit:hover {
+  background-color: #a28ad3;
   color: #ffffff;
 }
 
@@ -249,14 +262,14 @@ body {
 .page-content .patient-card .table-responsive table td {
   color: #4d3180;
 }
-.page-content .patient-card .table-responsive .btn-edit {
+.page-content .patient-card .table-responsive .btn-details {
   background-color: #26d922;
   color: #ffffff;
   border-radius: 25px;
   padding: 10px 20px;
   font-size: 12px;
 }
-.page-content .patient-card .table-responsive .btn-edit:hover {
+.page-content .patient-card .table-responsive .btn-details:hover {
   transition: 0.5s ease;
   background-color: #239c21;
 }
@@ -307,21 +320,22 @@ body {
   color: #2b3674;
 }
 
-#video-page .video-wrapper .video-card {
+.wrapper .card {
   background-color: #ffffff;
   height: auto;
   border-radius: 8px;
+  border: none;
 }
-#video-page .video-wrapper .video-card .thumbnail-video {
+.wrapper .card .thumbnail {
   width: 100%;
   border-radius: 8px;
 }
-#video-page .video-wrapper .video-card .thumbnail-video img {
+.wrapper .card .thumbnail img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-#video-page .video-wrapper .video-card .video-desc .video-duration {
+.wrapper .card .desc .duration {
   background: #e9edf7;
   color: #2b3674;
   font-size: 10px;
@@ -331,10 +345,74 @@ body {
   width: fit-content;
   border-radius: 4px;
 }
-#video-page .video-wrapper .video-card .video-desc .video-title {
+.wrapper .card .desc .title {
   color: #2b3674;
   font-size: 0.7em;
   font-weight: 700;
   max-height: 75px;
   overflow: hidden;
+}
+
+#patient-details-card .card {
+  border: none;
+  border-radius: 8px;
+}
+#patient-details-card .card h3 {
+  color: #2b3674;
+  font-weight: 600;
+}
+#patient-details-card .card .wrapper-details .details h6 {
+  color: #93b0c8;
+}
+#patient-details-card .card .wrapper-details .details .text-details {
+  color: #2b3674;
+  font-weight: 600;
+}
+@media screen and (max-width: 1366px) {
+  #patient-details-card .card .wrapper-details .details .text-details {
+    font-size: 12px;
+  }
+}
+#patient-details-card .card .wrapper-details::before {
+  content: "-";
+  background-color: #4318ff;
+  color: #4318ff;
+  font-weight: bold;
+  font-size: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+}
+
+#history-checkup h3 {
+  font-weight: 600;
+  color: #2b3674;
+}
+#history-checkup .card {
+  border: none;
+  border-radius: 8px;
+}
+#history-checkup .card .table-responsive {
+  margin-top: 1em;
+  border-top: 1px solid #e4e4e4;
+}
+#history-checkup .card .table-responsive .table th {
+  color: #4d3180;
+  font-size: 12px;
+  font-weight: 600;
+}
+#history-checkup .card .table-responsive .table td {
+  color: #4d3180;
+  font-size: 12px;
+  font-weight: 500;
+}
+#history-checkup .card .table-responsive .table .btn-details {
+  background-color: #26d922;
+  color: #ffffff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 12px;
+}
+#history-checkup .card .table-responsive .table .btn-details:hover {
+  transition: 0.5s ease;
+  background-color: #239c21;
 }/*# sourceMappingURL=custom.css.map */

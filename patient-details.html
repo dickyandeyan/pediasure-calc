@@ -107,50 +107,99 @@
             </p>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
-                    <h1 class="fw-bolder">Pasien</h1>
+                    <h1 class="fw-bolder">Pasien Detail</h1>
                 </div>
                 <div class="col-sm-12 col-md-6 text-md-end">
-                    <button type="button" class="btn btn-add-main" data-bs-toggle="modal" data-bs-target="#modalPatient">Tambah Pasien</button>
+                    <button class="btn btn-edit mb-2" data-bs-toggle="modal" data-bs-target="#modalPatient">Edit Data</button>
+                    <button type="button" class="btn btn-add-main px-5 mb-2">Kembali</button>
                 </div>
             </div>
         </div>
-        <div class="patient-card">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="card">
-                        <form action="#">
-                            <div class="search-input">
-                                <input type="text" name="patient" id="patient-search" class="form-control" placeholder="Cari Pasien">
-                                <i class="fas fa-search"></i>
+        <section id="patient-details-card">
+            <div class="card p-4">
+                <h3 class="mb-3">Ahmad Sanusi</h3>
+                <div class="row">
+                    <div class="col-sm-12 col-md-2 mb-2">
+                        <div class="wrapper-details d-flex">
+                            <div class="details">
+                                <h6>Umur</h6>
+                                <div class="text-details">5 Tahun 2 Bulan</div>
                             </div>
-                        </form>
-                        <div class="table-responsive mt-2">
-                            <!-- Should be DataTables -->
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto mb-2">
+                        <div class="wrapper-details d-flex">
+                            <div class="details">
+                                <h6>Tanggal Lahir</h6>
+                                <div class="text-details">24 November 2016</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto mb-2">
+                        <div class="wrapper-details d-flex">
+                            <div class="details">
+                                <h6>No HP (WhatsApp)</h6>
+                                <div class="text-details">08999766262</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-auto mb-2">
+                        <div class="wrapper-details d-flex">
+                            <div class="details">
+                                <h6>Terakhir Periksa</h6>
+                                <div class="text-details">Sabtu, 29 Oktober 2021 Pkl. 15.20 WIB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history-checkup">
+            <h3 class="mt-5">Riwayat Periksa</h3>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card p-3">
+                        <div class="search-input">
+                            <input type="text" name="patient" id="patient-search" class="form-control" placeholder="Cari Pasien">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="table-responsive">
                             <table class="table">
                                 <thead>
-                                    <tr class="text-center">
+                                    <tr>
                                         <th>No</th>
-                                        <th>Nama Lengkap</th>
-                                        <th>Tanggal Lahir</th>
-                                        <th>Umur</th>
-                                        <th>No HP</th>
                                         <th>Terakhir Periksa</th>
+                                        <th>Berat Badan</th>
+                                        <th>Tinggi Badan</th>
+                                        <th>Lingkar Kepala</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="align-middle text-center">
-                                        <td>1</td>
-                                        <td>Ahmad Sanusi</td>
-                                        <td>24 November 2017</td>
-                                        <td>5 Tahun</td>
-                                        <td>08911911911</td>
-                                        <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                    <tr class="align-middle">
+                                        <td class="text-center ">1</td>
+                                        <td>Sabtu, 29 Oktober 2021 Pkl. 15.20 WI</td>
                                         <td>
-                                            <a href="patient-details.html" style="text-decoration: none;">
-                                                <button type="button" class="d-inline btn btn-details my-1" data-bs-toggle="modal" data-bs-target="#modalPatient"><i class="far fa-edit me-2"></i>Lihat</button>
-                                            </a>
-                                            <button type="button" class="d-inline btn btn-delete my-1"><i class="far fa-trash-alt me-2"></i>Hapus</button>
+                                            Berat : 11.23 Kg
+                                            Gizi Baik
+                                            Pantau ulang berat badan
+                                            dan panjang/tinggi badan
+                                            berkala</td>
+                                        <td>
+                                            Tinggi : 79.6 cm
+                                            Perawakan Normal
+                                            Pantau ulang panjang/tinggi
+                                            badan berkala
+                                        </td>
+                                        <td>
+                                            Lingkar : 43 cm
+                                            Lingkar Kepala Normal
+                                            Pantau ulang lingkar
+                                            kepala berkala
+                                        </td>
+                                        <td>
+                                          <button type="button" class="btn btn-details my-2 text-nowrap" data-bs-toggle="modal" data-bs-target="#modalPatient"><i class="far fa-edit me-2"></i>Lihat Detail</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -159,7 +208,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <div class="modal fade" id="modalPatient" tabindex="-1" aria-labelledby="modalPatientLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-lg">

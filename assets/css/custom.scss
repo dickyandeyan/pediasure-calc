@@ -15,6 +15,7 @@ body {
 	input {
 		padding: 12px 50px;
 		border: 1px solid $gray-soft-1;
+		border-radius: 8px;
 	}
 
 	i {
@@ -34,6 +35,19 @@ body {
 
 	&:hover {
 		background-color: #221241;
+		color: $white;
+	}
+}
+
+.btn-edit {
+	background-color: $gray;
+	color: $white;
+	border-radius: 3rem;
+	padding: 1em;
+	font-size: 12px;
+
+	&:hover {
+		background-color: #a28ad3;
 		color: $white;
 	}
 }
@@ -156,10 +170,10 @@ body {
 }
 
 .page-content {
-   margin: 40px 10px;
+	margin: 40px 10px;
 
 	@media screen and (min-width: 768px) {
-      margin: 40px 20px 0 300px;
+		margin: 40px 20px 0 300px;
 	}
 
 	.header-greeting {
@@ -291,7 +305,7 @@ body {
 				}
 			}
 
-			.btn-edit {
+			.btn-details {
 				background-color: $green;
 				color: $white;
 				border-radius: 25px;
@@ -363,40 +377,120 @@ body {
 	}
 }
 
-#video-page {
-	.video-wrapper {
-		.video-card {
-			background-color: $white;
-			height: auto;
+.wrapper {
+	.card {
+		background-color: $white;
+		height: auto;
+		border-radius: 8px;
+		border: none;
+
+		.thumbnail {
+			width: 100%;
 			border-radius: 8px;
 
-			.thumbnail-video {
+			img {
 				width: 100%;
-				border-radius: 8px;
+				border-top-left-radius: 8px;
+				border-top-right-radius: 8px;
+			}
+		}
 
-				img {
-					width: 100%;
-					border-top-left-radius: 8px;
-					border-top-right-radius: 8px;
+		.desc {
+			.duration {
+				background: $gray-soft-2;
+				color: $black-soft-1;
+				font-size: 10px;
+				font-weight: 600;
+				width: fit-content;
+				border-radius: 4px;
+			}
+
+			.title {
+				color: $black-soft-1;
+				font-size: 0.7em;
+				font-weight: 700;
+				max-height: 75px;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+#patient-details-card {
+	.card {
+		border: none;
+		border-radius: 8px;
+
+		h3 {
+			color: $black-soft-1;
+			font-weight: 600;
+		}
+
+		.wrapper-details {
+			.details {
+				h6 {
+					color: $gray;
+				}
+
+				.text-details {
+					color: $black-soft-1;
+					font-weight: 600;
+
+					@media screen and (max-width: 1366px) {
+						font-size: 12px;
+					}
 				}
 			}
 
-			.video-desc {
-				.video-duration {
-					background: $gray-soft-2;
-					color: $black-soft-1;
-					font-size: 10px;
+			&::before {
+				content: '-';
+				background-color: $blue-dark;
+				color: $blue-dark;
+				font-weight: bold;
+				font-size: 10px;
+				margin-right: 8px;
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+#history-checkup {
+	h3 {
+		font-weight: 600;
+		color: $black-soft-1;
+	}
+
+	.card {
+		border: none;
+		border-radius: 8px;
+
+		.table-responsive {
+			margin-top: 1em;
+			border-top: 1px solid $gray-soft-1;
+			.table {
+				th {
+					color: $pedia-color;
+					font-size: 12px;
 					font-weight: 600;
-					width: fit-content;
-					border-radius: 4px;
 				}
 
-				.video-title {
-					color: $black-soft-1;
-					font-size: 0.7em;
-					font-weight: 700;
-					max-height: 75px;
-               overflow: hidden;
+				td {
+					color: $pedia-color;
+					font-size: 12px;
+					font-weight: 500;
+				}
+				.btn-details {
+					background-color: $green;
+					color: $white;
+					border-radius: 25px;
+					padding: 10px 20px;
+					font-size: 12px;
+
+					&:hover {
+						transition: 0.5s ease;
+						background-color: #239c21;
+					}
 				}
 			}
 		}
