@@ -1,0 +1,25 @@
+@import 'colorpallete';
+
+@mixin dropdownselect {
+   height: 30px !important;
+   border: none;
+   border-radius: 8px;
+}
+
+.in-range {
+   background-color: $pedia-color-soft !important;
+}
+
+.monthselect{
+   @include dropdownselect;
+   background-color: #f3f3f3 !important;
+}
+
+.yearselect {
+   @include dropdownselect;
+}
+
+.active {
+   background-color: $pedia-color !important;
+   border-radius: 3em !important;
+}

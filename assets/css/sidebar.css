@@ -99,9 +99,8 @@
   cursor: pointer;
   color: #fff;
 }
-.nav-sidebar .menu-list .active {
+.nav-sidebar .menu-list .active-menu {
   transition: 0.5s ease;
-  border-left: 4px solid #2b3674;
   background: linear-gradient(to left, #ffffff, #4d3180);
   color: #ffffff;
 }

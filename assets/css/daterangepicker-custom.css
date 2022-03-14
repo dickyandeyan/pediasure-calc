@@ -1,0 +1,21 @@
+.in-range {
+  background-color: #e7e1f1 !important;
+}
+
+.monthselect {
+  height: 30px !important;
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f3f3 !important;
+}
+
+.yearselect {
+  height: 30px !important;
+  border: none;
+  border-radius: 8px;
+}
+
+.active {
+  background-color: #4d3180 !important;
+  border-radius: 3em !important;
+}/*# sourceMappingURL=daterangepicker-custom.css.map */

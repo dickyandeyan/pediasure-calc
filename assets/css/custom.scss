@@ -1,6 +1,17 @@
 @import 'colorpallete';
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+// Component Utilities
+@mixin num-count {
+	color: $black-soft-1;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.counter-card {
+   @include num-count;
+}
+
 body {
 	background-color: #ebf7fe;
 	font-family: 'Montserrat', sans-serif;
@@ -192,9 +203,7 @@ body {
 	}
 
 	.num-count {
-		color: $black-soft-1;
-		font-size: 24px;
-		font-weight: 600;
+		@include num-count;
 	}
 
 	.stats-card {
