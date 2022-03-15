@@ -6,17 +6,48 @@
    border-radius: 8px;
 }
 
+@mixin btnDatePicker {
+   border-radius: 1em;
+   padding: 10px 40px !important;
+}
+
 .in-range {
    background-color: $pedia-color-soft !important;
 }
 
 .monthselect{
    @include dropdownselect;
-   background-color: #f3f3f3 !important;
+   background-color: $gray-soft-2;
 }
 
 .yearselect {
    @include dropdownselect;
+}
+
+.drp-selected {
+   display: none !important;
+}
+
+.btnDate {
+   background-color: $pedia-color;
+   color: $white;
+   @include btnDatePicker;
+
+   &:hover {
+      transition: all .5s ease;
+      background-color: #7253a8;
+      color: $white;
+   }
+}
+
+.btnCancel {
+   background-color: $gray-soft-2;
+   @include btnDatePicker;
+
+   &:hover {
+      transition: .5s ease;
+      background-color: $gray-soft-1;
+   }
 }
 
 .active {

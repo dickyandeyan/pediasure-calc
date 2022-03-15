@@ -6,13 +6,39 @@
   height: 30px !important;
   border: none;
   border-radius: 8px;
-  background-color: #f3f3f3 !important;
+  background-color: #e9edf7;
 }
 
 .yearselect {
   height: 30px !important;
   border: none;
   border-radius: 8px;
+}
+
+.drp-selected {
+  display: none !important;
+}
+
+.btnDate {
+  background-color: #4d3180;
+  color: #ffffff;
+  border-radius: 1em;
+  padding: 10px 40px !important;
+}
+.btnDate:hover {
+  transition: all 0.5s ease;
+  background-color: #7253a8;
+  color: #ffffff;
+}
+
+.btnCancel {
+  background-color: #e9edf7;
+  border-radius: 1em;
+  padding: 10px 40px !important;
+}
+.btnCancel:hover {
+  transition: 0.5s ease;
+  background-color: #e4e4e4;
 }
 
 .active {

@@ -11,6 +11,7 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/playbtn.css">
     <link rel="stylesheet" href="assets/css/custom_dropdown.css">
     <!-- Font Awesome 5.15 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -118,12 +119,25 @@
                         <div class="card">
                             <div class="thumbnail">
                                 <img src="./assets/images/video-thumb-1.png" alt="thumb-1" class="img-fluid">
+                                <!-- button -->
+                                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                    <!-- <div class="boton" onclick="this.classList.toggle('active')"> -->
+                                    <div class="boton">
+                                        <div class="fondo" x="0" y="0" width="200" height="200"></div>
+                                        <div class="icono" width="200" height="200">
+                                            <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                            <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                        </div>
+                                        <div class="puntero"></div>
+                                    </div>
+                                </a>
+                                <!-- end button -->
                             </div>
                             <div class="desc p-3">
                                 <div class="duration px-2 py-1">
                                     <p class="p-0 m-0">Durasi: 7 Menit 20 Detik</p>
                                 </div>
-                                <div class="title mt-2">
+                                <div class="title mt-3">
                                     Agar Cepat Turun, Ketahui 7 Jenis Makanan yang Tidak Boleh Dimakan Saat Demam
                                 </div>
                             </div>
@@ -133,14 +147,28 @@
                         <div class="card">
                             <div class="thumbnail">
                                 <img src="./assets/images/video-thumb-2.png" alt="thumb-1" class="img-fluid">
+                                <!-- button -->
+                                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                 <!-- <div class="boton" onclick="this.classList.toggle('active')"> -->
+                                 <div class="boton">
+                                     <div class="fondo" x="0" y="0" width="200" height="200"></div>
+                                     <div class="icono" width="200" height="200">
+                                         <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                         <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                     </div>
+                                     <div class="puntero"></div>
+                                 </div>
+                             </a>
+                             <!-- end button -->
                             </div>
                             <div class="desc p-3">
                                 <div class="duration px-2 py-1">
                                     <p class="p-0 m-0">Durasi: 7 Menit 20 Detik</p>
                                 </div>
-                                <div class="title mt-2">
+                                <div class="title mt-3">
                                     Agar Cepat Turun, Ketahui 7 Jenis Makanan yang Tidak Boleh Dimakan Saat Demam
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -148,9 +176,50 @@
                         <div class="card">
                             <div class="thumbnail">
                                 <img src="./assets/images/video-thumb-3.png" alt="thumb-1" class="img-fluid">
+                                <!-- button -->
+                                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                 <!-- <div class="boton" onclick="this.classList.toggle('active')"> -->
+                                 <div class="boton">
+                                     <div class="fondo" x="0" y="0" width="200" height="200"></div>
+                                     <div class="icono" width="200" height="200">
+                                         <div class="parte izquierda" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                         <div class="parte derecha" x="0" y="0" width="200" height="200" fill="#fff"></div>
+                                     </div>
+                                     <div class="puntero"></div>
+                                 </div>
+                             </a>
+                             <!-- end button -->
                             </div>
                             <div class="desc p-3">
                                 <div class="duration px-2 py-1">
+                                    <p class="p-0 m-0">Durasi: 7 Menit 20 Detik</p>
+                                </div>
+                                <div class="title mt-3">
+                                    Agar Cepat Turun, Ketahui 7 Jenis Makanan yang Tidak Boleh Dimakan Saat Demam
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-add-main px-5">Load More</button>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Video-->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="wrapper">
+                        <div class="card">
+                            <div class="text-end p-3">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc p-3">
+                                <div class="duration px-2 py-1 mb-3">
                                     <p class="p-0 m-0">Durasi: 7 Menit 20 Detik</p>
                                 </div>
                                 <div class="title mt-2">
@@ -159,9 +228,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
+                    </div> -->
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
 

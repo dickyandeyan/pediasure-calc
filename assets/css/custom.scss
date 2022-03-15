@@ -20,7 +20,7 @@ body {
 .title-text {
 	color: $black-soft-1;
 }
-.search-input {
+.search-input, .filter-input {
 	position: relative;
 
 	input {
@@ -28,6 +28,12 @@ body {
 		border: 1px solid $gray-soft-1;
 		border-radius: 8px;
 	}
+
+   select {
+      padding: 12px 20px;
+      border: 1px solid $gray-soft-1;
+		border-radius: 8px;
+   }
 
 	i {
 		position: absolute;
@@ -295,11 +301,15 @@ body {
 	}
 
 	.patient-card {
-		.card {
-			border: none !important;
+      
+      .card {
+         border: none !important;
 			min-height: 500px;
 			padding: 1em;
 			border-radius: 8px;
+         .title {
+            color: $gray;
+         }
 		}
 
 		.table-responsive {
@@ -394,6 +404,7 @@ body {
 		border: none;
 
 		.thumbnail {
+         position: relative;
 			width: 100%;
 			border-radius: 8px;
 
@@ -469,6 +480,10 @@ body {
 		font-weight: 600;
 		color: $black-soft-1;
 	}
+
+   .title {
+      color: $gray;
+   }
 
 	.card {
 		border: none;

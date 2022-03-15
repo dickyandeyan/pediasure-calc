@@ -118,13 +118,34 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="card">
+                        <div class="text-end">
+                            <div class="title mb-2">Urutkan Berdasarkan</div>
+                        </div>
                         <form action="#">
-                            <div class="search-input">
-                                <input type="text" name="patient" id="patient-search" class="form-control" placeholder="Cari Pasien">
-                                <i class="fas fa-search"></i>
+                            <div class="row filter-input">
+                                <div class="col-6">
+                                    <div class="search-input">
+                                        <input type="text" name="patient" id="patient-search" class="form-control" placeholder="Cari Pasien">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <select name="name" id="sortName" class="form-control">
+                                        <option value="0">Nama Orang Tua</option>
+                                        <option value="1">Nama Anak</option>
+                                        <option value="2">Tanggal Lahir</option>
+                                        <option value="3">Tanggal Periksa</option>
+                                    </select>
+                                </div>
+                                <div class="col-3">
+                                    <select name="alphaName" id="alphaName" class="form-control">
+                                        <option value="0">A - Z</option>
+                                        <option value="1">Z - A</option>
+                                    </select>
+                                </div>
                             </div>
                         </form>
-                        <div class="table-responsive mt-2">
+                        <div class="table-responsive mt-3">
                             <!-- Should be DataTables -->
                             <table class="table">
                                 <thead>
