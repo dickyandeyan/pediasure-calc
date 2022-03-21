@@ -1,24 +1,24 @@
 @import 'colorpallete';
 /* width */
 ::-webkit-scrollbar {
-   width: 8px;
- }
- 
- /* Track */
- ::-webkit-scrollbar-track {
-   background: #f1f1f1; 
- }
-  
- /* Handle */
- ::-webkit-scrollbar-thumb {
-   background: $gray-soft-1; 
- }
- 
- /* Handle on hover */
- ::-webkit-scrollbar-thumb:hover {
-    transition: 0.5s ease-in-out;
-   background: $pedia-color; 
- }
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $gray-soft-1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	transition: 0.5s ease-in-out;
+	background: $pedia-color;
+}
 .nav-sidebar {
 	height: 100%;
 	width: 260px;
@@ -41,7 +41,7 @@
 	}
 
 	.doc-profile {
-      margin: 10px 0 20px;
+		margin: 10px 0 20px;
 		padding-bottom: 1em;
 
 		.avatar-placeholder {
@@ -77,8 +77,9 @@
 			font-weight: 400;
 		}
 
-		.main-menu, .support-menu {
-         padding-bottom: 20px;
+		.main-menu,
+		.support-menu {
+			padding-bottom: 20px;
 
 			ul {
 				padding: 0;
@@ -105,27 +106,36 @@
 				}
 			}
 		}
-      .menu {
-         &:hover {
-            background: linear-gradient(to left,$white, $pedia-color);
-            transition: 0.5s ease;
-            cursor: pointer;
-            color: #fff;
-         }
-      }
-      .active-menu {
-         transition: 0.5s ease;
-         background: linear-gradient(to left,$white, $pedia-color);
-         color: $white;
-      }
+		.menu {
+			&:hover {
+            background: linear-gradient(
+               90deg,
+               rgba(0, 117, 255, 0.227328431372549) 0%,
+               rgba(0, 117, 255, 0) 90%
+            );
+				transition: 0.5s ease;
+				cursor: pointer;
+				color: $blue;
+			}
+		}
+		.active-menu {
+			transition: 0.5s ease;
+			background: #0075ff;
+			background: linear-gradient(
+				90deg,
+				rgba(0, 117, 255, 0.227328431372549) 0%,
+				rgba(0, 117, 255, 0) 90%
+			);
+			color: $blue;
+			border-left: 4px solid #0075ff;
+			font-weight: bold;
+		}
 	}
-   .sidebar-footer{
-      padding: 2em;
-      font-size: 12px;
-      font-weight: 600;
-      border-top: 1px solid $gray;
-      color: #2b3674;
-   }
-
-  
+	.sidebar-footer {
+		padding: 2em;
+		font-size: 12px;
+		font-weight: 600;
+		border-top: 1px solid $gray;
+		color: #2b3674;
+	}
 }

@@ -8,8 +8,13 @@
 	font-weight: 600;
 }
 
+@mixin rounded-1 {
+	border-radius: 18px;
+	border: none;
+}
+
 .counter-card {
-   @include num-count;
+	@include num-count;
 }
 
 body {
@@ -20,7 +25,8 @@ body {
 .title-text {
 	color: $black-soft-1;
 }
-.search-input, .filter-input {
+.search-input,
+.filter-input {
 	position: relative;
 
 	input {
@@ -29,11 +35,11 @@ body {
 		border-radius: 8px;
 	}
 
-   select {
-      padding: 12px 20px;
-      border: 1px solid $gray-soft-1;
+	select {
+		padding: 12px 20px;
+		border: 1px solid $gray-soft-1;
 		border-radius: 8px;
-   }
+	}
 
 	i {
 		position: absolute;
@@ -301,15 +307,14 @@ body {
 	}
 
 	.patient-card {
-      
-      .card {
-         border: none !important;
+		.card {
+			border: none !important;
 			min-height: 500px;
 			padding: 1em;
 			border-radius: 8px;
-         .title {
-            color: $gray;
-         }
+			.title {
+				color: $gray;
+			}
 		}
 
 		.table-responsive {
@@ -355,8 +360,7 @@ body {
 
 #modalPatient {
 	.modal-content {
-		border-radius: 18px;
-		border: none;
+		@include rounded-1;
 	}
 
 	input,
@@ -371,6 +375,36 @@ body {
 		color: $black-soft-1;
 	}
 }
+
+#modalDetailPatient{
+   .modal-content {
+      @include rounded-1;
+   }
+
+   .detail-wrapper {
+      border-left: 5px solid $blue-dark;
+      padding-left: 8px;
+
+      .detail-title {
+         color: $gray;
+      }
+
+      .detail-main-text {
+         color: $black-soft-1;
+         font-size: 16px;
+         font-weight: 600;
+      }
+   }
+
+   .milk-rec {
+      @include rounded-1;
+      border: 1px dashed #000;
+      background: $pedia-color-soft;
+      padding: 2em;
+      text-align: center;
+   }
+}
+
 
 .calc-wrapper {
 	background: #fff;
@@ -404,7 +438,7 @@ body {
 		border: none;
 
 		.thumbnail {
-         position: relative;
+			position: relative;
 			width: 100%;
 			border-radius: 8px;
 
@@ -481,9 +515,9 @@ body {
 		color: $black-soft-1;
 	}
 
-   .title {
-      color: $gray;
-   }
+	.title {
+		color: $gray;
+	}
 
 	.card {
 		border: none;

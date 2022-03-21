@@ -163,7 +163,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card p-3">
-                       <div class="title mb-2">Pilih Tanggal Periksa</div>
+                        <div class="title mb-2">Pilih Tanggal Periksa</div>
                         <input type="text" name="daterange" class="form-control" />
                         <div class="table-responsive">
                             <table class="table">
@@ -266,7 +266,161 @@
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content p-4">
                 <button type="button" class="ms-auto btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h1>Under Construction</h1>
+                <h3 class="fw-bold title-text">Hasil Pemeriksaan</h3>
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">Tanggal Periksa</div>
+                                    <div class="detail-main-text">Sabtu, 2 April 2022 Pkl 15.20 WIB</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">Umur</div>
+                                    <div class="detail-main-text">5 Tahun 6 Bulan</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">Berat Badan</div>
+                                    <div class="detail-main-text">10 Kg</div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">Tinggi Badan</div>
+                                    <div class="detail-main-text">76 cm</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 my-3">
+                                <h5 class="title-text fw-bold">1. Penilaian Status Nutrisi</h5>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        1a. Penilaian Status Berat Badan (BB/U)
+                                    </div>
+                                    <div class="detail-main-text">
+                                        10 kg berada di median s.d. (+1 SD), sehingga BB Normal
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        1b. Penilaian Status Tinggi Badan (TB/U)
+                                    </div>
+                                    <div class="detail-main-text">
+                                        76 cm berada di (-1 SD) s.d. (Median), sehingga TB Normal
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        1c. Penilaian Status Gizi (BB/TB)
+                                    </div>
+                                    <div class="detail-main-text">
+                                        10 kg berada di (-2 SD) s.d. (+1 SD), sehingga Gizi Baik
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 my-3">
+                                <h5 class="title-text fw-bold">2. Menghitung Kebutuhan Kalori</h5>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        2a. Menentukan BB Ideal
+                                    </div>
+                                    <div class="detail-main-text">
+                                        Berat badan ideal = median = 9.7 kg
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        2b. Menentukan Height Age
+                                    </div>
+                                    <div class="detail-main-text">
+                                        Height Age 12-13 bulan, Karena TB = 76 kg terletak di antara kedua nilai umur tersebut
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        2c. Menentukan RDA (Requirement Daily Allowance)
+                                    </div>
+                                    <div class="detail-main-text">
+                                        Karena Height Age 12-13 bulan, maka diambil RDA 1-3 tahun untuk anak Laki-Laki, sehingga RDA adalah 100 kal/kgBB
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        2d. Menentukan Kebutuhan Kalori Harian
+                                    </div>
+                                    <div class="detail-main-text">
+                                        Kalori : 970 kalori/hari
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 my-3">
+                                <h5 class="title-text fw-bold">3. Perhitungan Kebutuhan PediaComplete</h5>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        3a. Menghitung Kebutuhan Kalori Harian dari ONS
+                                    </div>
+                                    <div class="detail-main-text">
+                                        Kalori dari ONS : 291 kalori/hari
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="detail-wrapper">
+                                    <div class="detail-title">
+                                        3b. Menghitung Kebutuhan Scoop
+                                    </div>
+                                    <div class="detail-main-text mb-3">
+                                        3b.1. Menghitung Kebutuhan gram PediaSure
+                                        Kalori per ml 1 kkal/ml
+                                        mL PediaComplete 291 ml/hari
+                                    </div>
+                                    <div class="detail-main-text mb-3">
+                                        3b.2. Menghitung Kebutuhan Scoop PediaComplete
+                                        1 scoop 40 ml
+                                        untuk mendapatkan 291ml ~ 300ml 7,5
+                                        8 scoop = 78,4 g per hari
+                                    </div>
+                                    <div class="detail-main-text mb-3">
+                                        3b.3. Menghitung kebutuhan untuk 2 minggu
+                                        1097,6 gram x 2,744 = 3 kaleng PediaComplete 400g
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="milk-rec">
+                            <h3 class="fw-bold title-text">Resep</h3>
+                            <img src="./assets/images/pedia-milk.png" alt="milk" class="img-fluid my-3">
+                            <h5 class="fw-bold title-text">3 kaleng PediaComplete 400g untuk 2 minggu</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
