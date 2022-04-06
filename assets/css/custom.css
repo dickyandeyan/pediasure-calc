@@ -207,7 +207,7 @@ body {
   height: 56px;
   border-radius: 100%;
   background-color: #f4f7fe;
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 .page-content .stats-card .card .card-body .icon-holder i {
   color: #0075ff;
