@@ -8,6 +8,85 @@ for (var i = 0; i < btns.length; i++) {
 	})
 }
 
+const closeNav = async () => {
+	const expandBtn = document.getElementById('expand-btn')
+	const menuTitle = document.getElementById('support-title')
+	const menuList = document.querySelector('.nav-sidebar-mobile')
+	const getMainMenuList = menuList.querySelector('.main-menu')
+	const getSupportMenuList = menuList.querySelector('.support-menu')
+	const liListMain = getMainMenuList.childNodes
+	const liListSupport = getSupportMenuList.childNodes
+	const dataLiMain = liListMain[1].childNodes
+	const dataLiSupport = liListSupport[3].childNodes
+
+	document.getElementById('sidebar-mobile').style.width = '80px'
+	document.getElementById('page-content').style.marginLeft = '80px'
+	document.getElementById('page-content').classList.remove('moved')
+	document.getElementById('doc-profile').style.display = 'none'
+	expandBtn.classList.remove('d-none')
+	menuTitle.classList.add('d-none')
+	for (let i = 0; i < dataLiMain.length; i++) {
+		if (i % 2 == 1) {
+			let li = dataLiMain[i]
+			let selectSpan = li.firstChild.nextSibling.querySelector('span')
+			selectSpan.classList.add('d-none')
+		}
+	}
+	for (let i = 0; i < dataLiSupport.length; i++) {
+		if (i % 2 == 1) {
+			let li = dataLiSupport[i]
+			let selectSpan = li.firstChild.nextSibling.querySelector('span')
+			selectSpan.classList.add('d-none')
+		}
+	}
+}
+
+const showNav = () => {
+	const expandBtn = document.getElementById('expand-btn')
+	const menuTitle = document.getElementById('support-title')
+	const menuList = document.querySelector('.nav-sidebar-mobile')
+	const getMainMenuList = menuList.querySelector('.main-menu')
+	const getSupportMenuList = menuList.querySelector('.support-menu')
+	const liListMain = getMainMenuList.childNodes
+	const liListSupport = getSupportMenuList.childNodes
+	const dataLi = liListMain[1].childNodes
+	const dataLiSupport = liListSupport[3].childNodes
+
+	document.getElementById('sidebar-mobile').style.width = '280px'
+	document.getElementById('page-content').style.marginLeft = '0px'
+	document.getElementById('page-content').classList.add('moved')
+	document.getElementById('doc-profile').style.display = 'block'
+	expandBtn.classList.add('d-none')
+	menuTitle.classList.remove('d-none')
+	for (let i = 0; i < dataLi.length; i++) {
+		if (i % 2 == 1) {
+			let li = dataLi[i]
+			let selectSpan = li.firstChild.nextSibling.querySelector('span')
+			selectSpan.classList.remove('d-none')
+		}
+	}
+	for (let i = 0; i < dataLiSupport.length; i++) {
+		if (i % 2 == 1) {
+			let li = dataLiSupport[i]
+			let selectSpan = li.firstChild.nextSibling.querySelector('span')
+			selectSpan.classList.remove('d-none')
+		}
+	}
+}
+
+function resizeListener() {
+	const width = window.innerWidth
+	if (width >= 768) {
+		document.getElementById('page-content').style.marginLeft = '280px'
+	}
+
+	if (width < 768) {
+		closeNav()
+	}
+}
+
+window.addEventListener('resize', resizeListener)
+
 const ctx = document.getElementById('myChart')
 const data = {
 	labels: ['Overweight', 'Normal', 'Undeweight'],
@@ -15,11 +94,7 @@ const data = {
 		{
 			label: 'My First Dataset',
 			data: [300, 50, 100],
-			backgroundColor: [
-				'#0075FF',
-				'#4318FF',
-				'#E9EDF7',
-			],
+			backgroundColor: ['#0075FF', '#4318FF', '#E9EDF7'],
 			hoverOffset: 10,
 		},
 	],
@@ -32,11 +107,11 @@ const myChart = new Chart(ctx, {
 			legend: {
 				display: true,
 				position: 'right',
-            labels: {
-               usePointStyle: true,
-               pointStyle: 'circle',
-               padding: 30
-            }
+				labels: {
+					usePointStyle: true,
+					pointStyle: 'circle',
+					padding: 30,
+				},
 			},
 			title: {
 				display: true,
