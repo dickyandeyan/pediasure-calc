@@ -113,6 +113,9 @@
   border-left: 4px solid #0075ff;
   font-weight: bold;
 }
+.nav-sidebar .menu-list .active-menu path {
+  border: #4318ff;
+}
 .nav-sidebar .sidebar-footer {
   padding: 2em;
   font-size: 12px;
