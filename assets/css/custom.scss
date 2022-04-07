@@ -22,6 +22,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
 }
+
 .title-text {
 	color: $black-soft-1;
 }
@@ -193,7 +194,7 @@ body {
 }
 
 .page-content-mobile {
-   margin: 40px 0 0 290px;
+	margin: 40px 0 0 290px;
 }
 
 .page-content {
@@ -380,35 +381,34 @@ body {
 	}
 }
 
-#modalDetailPatient{
-   .modal-content {
-      @include rounded-1;
-   }
+#modalDetailPatient {
+	.modal-content {
+		@include rounded-1;
+	}
 
-   .detail-wrapper {
-      border-left: 5px solid $blue-dark;
-      padding-left: 8px;
+	.detail-wrapper {
+		border-left: 5px solid $blue-dark;
+		padding-left: 8px;
 
-      .detail-title {
-         color: $gray;
-      }
+		.detail-title {
+			color: $gray;
+		}
 
-      .detail-main-text {
-         color: $black-soft-1;
-         font-size: 16px;
-         font-weight: 600;
-      }
-   }
+		.detail-main-text {
+			color: $black-soft-1;
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
 
-   .milk-rec {
-      @include rounded-1;
-      border: 1px dashed #000;
-      background: $pedia-color-soft;
-      padding: 2em;
-      text-align: center;
-   }
+	.milk-rec {
+		@include rounded-1;
+		border: 1px dashed #000;
+		background: $pedia-color-soft;
+		padding: 2em;
+		text-align: center;
+	}
 }
-
 
 .calc-wrapper {
 	background: #fff;
@@ -557,4 +557,54 @@ body {
 			}
 		}
 	}
+}
+
+#pic {
+	background-color: $black-soft-1;
+
+   .btn-add-main {
+      background-color: $blue-dark;
+
+      &:hover {
+         transition: .5s ease;
+         background-color: $black-soft-2;
+      }
+   }   
+
+	.pic-page {
+		background-color: $black-soft-1;
+
+		h1,
+		p {
+			color: $white;
+		}
+
+		.stats-card {
+			.card {
+				&:hover {
+					transition: 0.5s ease;
+					background-color: $blue-dark;
+
+					.stats {
+						color: $gray-soft-2;
+						font-size: 14px;
+					}
+
+					.num-count {
+						color: $white;
+						font-size: 24px;
+						font-weight: 600;
+					}
+
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+   .patient-card {
+      h5 {
+         color: $white;
+      }
+   }
 }

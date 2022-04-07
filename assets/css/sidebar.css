@@ -182,7 +182,7 @@
   overflow: hidden;
 }
 .nav-sidebar-mobile .menu:hover {
-  background-color: #0077ff1a;
+  background-color: rgba(0, 119, 255, 0.1019607843);
   transition: 0.5s ease;
   cursor: pointer;
   color: #0075ff;
@@ -191,7 +191,7 @@
 }
 .nav-sidebar-mobile .active-menu {
   transition: 0.5s ease;
-  background-color: #0077ff1a;
+  background-color: rgba(0, 119, 255, 0.1019607843);
   border-radius: 8px;
   color: #0075ff;
   font-weight: 700;

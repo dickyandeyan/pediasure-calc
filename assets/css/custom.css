@@ -466,4 +466,39 @@ body {
 #history-checkup .card .table-responsive .table .btn-details:hover {
   transition: 0.5s ease;
   background-color: #239c21;
+}
+
+#pic {
+  background-color: #2b3674;
+}
+#pic .btn-add-main {
+  background-color: #4318ff;
+}
+#pic .btn-add-main:hover {
+  transition: 0.5s ease;
+  background-color: #707eae;
+}
+#pic .pic-page {
+  background-color: #2b3674;
+}
+#pic .pic-page h1,
+#pic .pic-page p {
+  color: #ffffff;
+}
+#pic .pic-page .stats-card .card:hover {
+  transition: 0.5s ease;
+  background-color: #4318ff;
+  cursor: pointer;
+}
+#pic .pic-page .stats-card .card:hover .stats {
+  color: #e9edf7;
+  font-size: 14px;
+}
+#pic .pic-page .stats-card .card:hover .num-count {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+}
+#pic .patient-card h5 {
+  color: #ffffff;
 }/*# sourceMappingURL=custom.css.map */
