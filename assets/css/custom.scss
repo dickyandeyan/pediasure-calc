@@ -614,3 +614,53 @@ label {
 		}
 	}
 }
+
+#pic {
+	background-color: $black-soft-1;
+
+   .btn-add-main {
+      background-color: $blue-dark;
+
+      &:hover {
+         transition: .5s ease;
+         background-color: $black-soft-2;
+      }
+   }   
+
+	.pic-page {
+		background-color: $black-soft-1;
+
+		h1,
+		p {
+			color: $white;
+		}
+
+		.stats-card {
+			.card {
+				&:hover {
+					transition: 0.5s ease;
+					background-color: $blue-dark;
+
+					.stats {
+						color: $gray-soft-2;
+						font-size: 14px;
+					}
+
+					.num-count {
+						color: $white;
+						font-size: 24px;
+						font-weight: 600;
+					}
+
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+   .patient-card {
+      h5 {
+         color: $white;
+      }
+   }
+}

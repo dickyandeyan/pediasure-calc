@@ -138,6 +138,10 @@
 			color: $blue;
 			border-left: 4px solid #0075ff;
 			font-weight: bold;
+
+         path {
+            border: $blue-dark;
+         }
 		}
 	}
 	.sidebar-footer {
