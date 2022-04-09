@@ -1,4 +1,12 @@
 @import 'colorpallete';
+
+@font-face {
+   font-family: 'Avenir-Medium';
+   src: url('/assets/fonts/Avenir-Medium.woff2') format('woff2'),
+       url('/assets/fonts/Avenir-Medium.woff2') format('woff');
+   font-style: normal;
+}
+
 /* width */
 ::-webkit-scrollbar {
 	width: 8px;
@@ -29,6 +37,7 @@
 	background-color: #ffffff !important;
 	overflow-x: hidden;
 	padding-top: 16px;
+   font-family: 'Avenir-Medium', sans-serif;
 
 	.logo-container {
 		display: flex;
@@ -41,7 +50,7 @@
 	}
 
 	.doc-profile {
-		margin: 10px 0 20px;
+		margin: 25px 0 20px;
 		padding-bottom: 1em;
 
 		.avatar-placeholder {
@@ -148,6 +157,7 @@
 	background: $white;
 	width: 280px;
 	z-index: 2;
+   font-family: 'Avenir-Medium', sans-serif;
 
 	.doc-profile {
 		padding: 1em;

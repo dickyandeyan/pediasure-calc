@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("/assets/fonts/Avenir-Medium.woff2") format("woff2"), url("/assets/fonts/Avenir-Medium.woff2") format("woff");
+  font-style: normal;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -30,6 +35,7 @@
   background-color: #ffffff !important;
   overflow-x: hidden;
   padding-top: 16px;
+  font-family: "Avenir-Medium", sans-serif;
 }
 .nav-sidebar .logo-container {
   display: flex;
@@ -40,7 +46,7 @@
   width: 168px;
 }
 .nav-sidebar .doc-profile {
-  margin: 10px 0 20px;
+  margin: 25px 0 20px;
   padding-bottom: 1em;
 }
 .nav-sidebar .doc-profile .avatar-placeholder {
@@ -129,6 +135,7 @@
   background: #ffffff;
   width: 280px;
   z-index: 2;
+  font-family: "Avenir-Medium", sans-serif;
 }
 .nav-sidebar-mobile .doc-profile {
   padding: 1em;
@@ -182,7 +189,7 @@
   overflow: hidden;
 }
 .nav-sidebar-mobile .menu:hover {
-  background-color: #0077ff1a;
+  background-color: rgba(0, 119, 255, 0.1019607843);
   transition: 0.5s ease;
   cursor: pointer;
   color: #0075ff;
@@ -191,7 +198,7 @@
 }
 .nav-sidebar-mobile .active-menu {
   transition: 0.5s ease;
-  background-color: #0077ff1a;
+  background-color: rgba(0, 119, 255, 0.1019607843);
   border-radius: 8px;
   color: #0075ff;
   font-weight: 700;

@@ -1,5 +1,30 @@
 @import 'colorpallete';
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@font-face {
+	font-family: 'Avenir';
+	src: url('/assets/fonts/Avenir-Heavy.woff2') format('woff2'),
+		url('/assets/fonts/Avenir-Heavy.woff2') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Avenir-Medium';
+	src: url('/assets/fonts/Avenir-Medium.woff') format('woff2'),
+		url('/assets/fonts/Avenir-Medium.woff2') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Avenir-Light';
+	src: url('/assets/fonts/Avenir-Light.woff') format('woff2'),
+		url('/assets/fonts/Avenir-Light.woff2') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
 
 // Component Utilities
 @mixin num-count {
@@ -13,18 +38,62 @@
 	border: none;
 }
 
-.counter-card {
-	@include num-count;
+@mixin avenirLight {
+	font-family: 'Avenir-Light', sans-serif !important;
+}
+
+@mixin avenirMedium {
+	font-family: 'Avenir-Medium', sans-serif !important;
+}
+
+.avenir {
+	font-family: 'Avenir', sans-serif;
+}
+
+.avenir-medium {
+	font-family: 'Avenir-Medium', sans-serif;
+}
+
+.avenir-light {
+	font-family: 'Avenir-Light', sans-serif;
 }
 
 body {
 	background-color: #ebf7fe;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Avenir', sans-serif;
 	overflow-x: hidden;
 }
+
+label {
+	@include avenirMedium;
+}
+
+::placeholder {
+	@include avenirLight;
+	color: $black-soft-2 !important;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	@include avenirLight;
+	color: $black-soft-2 !important;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	@include avenirLight;
+	color: $black-soft-2 !important;
+}
+
+.counter-card {
+	@include num-count;
+}
+
 .title-text {
 	color: $black-soft-1;
 }
+
 .search-input,
 .filter-input {
 	position: relative;
@@ -193,7 +262,7 @@ body {
 }
 
 .page-content-mobile {
-   margin: 40px 0 0 290px;
+	margin: 40px 0 0 290px;
 }
 
 .page-content {
@@ -210,12 +279,14 @@ body {
 
 		h1 {
 			color: $black-soft-1;
+			letter-spacing: -1px;
 		}
 	}
 
 	.stats {
 		color: $gray;
 		font-size: 14px;
+		font-family: 'Avenir-Medium';
 	}
 
 	.num-count {
@@ -248,24 +319,10 @@ body {
 					}
 				}
 			}
-
-			&:hover {
-				transition: 0.5s ease;
-				background-color: $pedia-color;
-
-				.stats {
-					color: $gray-soft-2;
-					font-size: 14px;
-				}
-
-				.num-count {
-					color: $white;
-					font-size: 24px;
-					font-weight: 600;
-				}
-
-				cursor: pointer;
-			}
+		}
+		#abbot {
+			background-color: $pedia-color;
+			color: $white;
 		}
 	}
 
@@ -380,35 +437,34 @@ body {
 	}
 }
 
-#modalDetailPatient{
-   .modal-content {
-      @include rounded-1;
-   }
+#modalDetailPatient {
+	.modal-content {
+		@include rounded-1;
+	}
 
-   .detail-wrapper {
-      border-left: 5px solid $blue-dark;
-      padding-left: 8px;
+	.detail-wrapper {
+		border-left: 5px solid $blue-dark;
+		padding-left: 8px;
 
-      .detail-title {
-         color: $gray;
-      }
+		.detail-title {
+			color: $gray;
+		}
 
-      .detail-main-text {
-         color: $black-soft-1;
-         font-size: 16px;
-         font-weight: 600;
-      }
-   }
+		.detail-main-text {
+			color: $black-soft-1;
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
 
-   .milk-rec {
-      @include rounded-1;
-      border: 1px dashed #000;
-      background: $pedia-color-soft;
-      padding: 2em;
-      text-align: center;
-   }
+	.milk-rec {
+		@include rounded-1;
+		border: 1px dashed #000;
+		background: $pedia-color-soft;
+		padding: 2em;
+		text-align: center;
+	}
 }
-
 
 .calc-wrapper {
 	background: #fff;
@@ -457,7 +513,7 @@ body {
 			.duration {
 				background: $gray-soft-2;
 				color: $black-soft-1;
-				font-size: 10px;
+				font-size: 12px;
 				font-weight: 600;
 				width: fit-content;
 				border-radius: 4px;
@@ -465,7 +521,7 @@ body {
 
 			.title {
 				color: $black-soft-1;
-				font-size: 0.7em;
+				font-size: 16px;
 				font-weight: 700;
 				max-height: 75px;
 				overflow: hidden;

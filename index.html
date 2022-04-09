@@ -23,7 +23,7 @@
     <!-- SIDEBAR DESKTOP -->
     <div class="nav-sidebar bg-dark d-none d-md-block">
         <div class="logo-container">
-            <img src="assets/images/pediasure-logo.png" alt="logo.png">
+            <img src="assets/images/recopedia-violet.png" alt="logo.png">
         </div>
         <div class="doc-profile">
             <div class="row">
@@ -85,7 +85,7 @@
                             Profil
                         </li>
                     </a>
-                    <a href="#">
+                    <a href="https://id.abbott/">
                         <li class="menu">
                             <i class="fas fa-cog"></i>
                             Abbot Indonesia
@@ -160,8 +160,7 @@
             </ul>
         </div>
         <div class="support-menu">
-            <h6 class="ps-3 mb-4"
-            id="support-title">SUPPORT</h6>
+            <h6 class="ps-3 mb-4" id="support-title">SUPPORT</h6>
             <ul>
                 <a href="#">
                     <li class="menu">
@@ -187,7 +186,7 @@
                 <p class="p-0 m-0">
                     Hi, Dr. Irianda Jatmiko
                 </p>
-                <h1 class="fw-bolder">Selamat datang di Pediasure RX Calculator</h1>
+                <h1 class="fw-bolder">Selamat datang di Recopedia</h1>
             </div>
             <div class="stats-card">
                 <div class="row">
@@ -198,7 +197,7 @@
                                     <i class="far fa-user"></i>
                                 </div>
                                 <div class="mt-2">
-                                    <div class="stats">Total Pasien</div>
+                                    <div class="stats fw-light">Total Pasien</div>
                                     <div class="num-count">
                                         2029
                                     </div>
@@ -213,7 +212,7 @@
                                     <i class="far fa-clipboard"></i>
                                 </div>
                                 <div class="mt-2">
-                                    <div class="stats">Total Resep</div>
+                                    <div class="stats fw-light">Total Resep</div>
                                     <div class="num-count">
                                         3405
                                     </div>
@@ -222,13 +221,14 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-lg-3 pe-0">
-                        <div class="card shadow">
+                        <div class="card shadow" id="abbot">
+                            <a href="https://id.abbott" target="_blank" class="stretched-link"></a>
                             <div class="card-body d-flex align-items-center">
                                 <div class="icon-holder rounded-cirle">
                                     <i class="fas fa-headset"></i>
                                 </div>
-                                <div class="mt-2">
-                                    <div class="stats">Abbot Indonesia Support</div>
+                                <div class="ms-3 mt-2">
+                                    <div>Abbot Indonesia <br> Support</div>
                                 </div>
                             </div>
                         </div>
@@ -238,14 +238,14 @@
             <!-- CHART Placeholde -->
             <div class="main-chart mt-5">
                 <div class="row">
-                    <div class="col-12 col-sm-6 mb-3">
+                    <div class="col-12 col-md-6 mb-3">
                         <div class="card p-3">
                             <div class="row align-items-center">
                                 <div class="col-6">
-                                    <input type="text" name="daterange" class="form-control" />
+                                    <input type="text" name="daterange" class="form-control shadow" />
                                 </div>
                                 <div class="col-6">
-                                    <div class="ms-5">
+                                    <div class="ms-lg-5 text-center text-md-start">
                                         <div class="stats">
                                             Jumlah Pasien
                                         </div>
@@ -256,14 +256,153 @@
                                 </div>
                             </div>
                             <div class="row justify-content-center">
-                                <div class="col-8 mt-3">
-                                    <canvas id="myChart" width="100" height="100"></canvas>
+                                <div class="col-12">
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Hasil Penilaian Berat Badan</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card p-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <input type="text" name="daterange" class="form-control shadow" />
+                                </div>
+                                <div class="col-6">
+                                    <div class="ms-lg-5 text-center text-md-start">
+                                        <div class="stats">
+                                            Jumlah Pasien
+                                        </div>
+                                        <h1 class="counter-card">
+                                            2097
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Hasil Penilaian Tinggi Badan</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card p-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <input type="text" name="daterange" class="form-control shadow" />
+                                </div>
+                                <div class="col-6">
+                                    <div class="ms-lg-5 text-center text-md-start">
+                                        <div class="stats">
+                                            Jumlah Pasien
+                                        </div>
+                                        <h1 class="counter-card">
+                                            2097
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Hasil Status Gizi Badan</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card p-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <input type="text" name="daterange" class="form-control shadow" />
+                                </div>
+                                <div class="col-6">
+                                    <div class="ms-lg-5 text-center text-md-start">
+                                        <div class="stats">
+                                            Jumlah Pasien
+                                        </div>
+                                        <h1 class="counter-card">
+                                            2097
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Merk Susu yang dibagikan</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card p-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <input type="text" name="daterange" class="form-control shadow" />
+                                </div>
+                                <div class="col-6">
+                                    <div class="ms-lg-5 text-center text-md-start">
+                                        <div class="stats">
+                                            Jumlah Pasien
+                                        </div>
+                                        <h1 class="counter-card">
+                                            2097
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Jenis Kelamin</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                        <div class="card p-3">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <input type="text" name="daterange" class="form-control shadow" />
+                                </div>
+                                <div class="col-6">
+                                    <div class="ms-lg-5 text-center text-md-start">
+                                        <div class="stats">
+                                            Jumlah Pasien
+                                        </div>
+                                        <h1 class="counter-card">
+                                            2097
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-12 mt-3">
+                                    <h5 class="title-text">Rentang Usia</h5>
+                                    <div class="chart-container" style="position: relative; height:auto; width:auto">
+                                        <canvas class="myChart" width="100" height="100"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <!-- END CHART Placeholde -->
         </div>
@@ -276,6 +415,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/daterangepicker.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
