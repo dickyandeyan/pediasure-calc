@@ -58,6 +58,29 @@
 	font-family: 'Avenir-Light', sans-serif;
 }
 
+.table-info {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   padding-bottom: 1em;
+   @include avenirMedium;
+
+   .dropdown-container {
+      position: relative;
+      width: 100px;
+
+      .page-select {
+         border: none;
+      }
+
+      i {
+         position: absolute;
+         right: 45px;
+         top: 10px;
+      }
+   }
+}
+
 body {
 	background-color: #ebf7fe;
 	font-family: 'Avenir', sans-serif;
@@ -417,6 +440,28 @@ label {
 			}
 		}
 	}
+}
+
+#searchPatient {
+   .modal-content {
+      @include rounded-1;
+   .modal-top {
+      position: relative;
+
+      .btn-close {
+         position: absolute;
+         right: 0;
+         top: -35px;
+      }
+   }
+   
+   .table {
+      color: $black-soft-1
+   }
+
+   
+
+   }
 }
 
 #modalPatient {

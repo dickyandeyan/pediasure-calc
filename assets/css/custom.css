@@ -1,72 +1,82 @@
 @font-face {
-  font-family: 'Avenir';
+  font-family: "Avenir";
   src: url("../fonts/Avenir-Heavy.woff2") format("woff2"), url("../fonts/Avenir-Heavy.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
   src: url("../fonts/Avenir-Medium.woff") format("woff2"), url("../fonts/Avenir-Medium.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Avenir-Light';
+  font-family: "Avenir-Light";
   src: url("../fonts/Avenir-Light.woff") format("woff2"), url("../fonts/Avenir-Light.woff2") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 .avenir {
-  font-family: 'Avenir', sans-serif;
+  font-family: "Avenir", sans-serif;
 }
 
 .avenir-medium {
-  font-family: 'Avenir-Medium', sans-serif;
+  font-family: "Avenir-Medium", sans-serif;
 }
 
 .avenir-light {
-  font-family: 'Avenir-Light', sans-serif;
+  font-family: "Avenir-Light", sans-serif;
+}
+
+.table-info {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 1em;
+  font-family: "Avenir-Medium", sans-serif !important;
+}
+.table-info .dropdown-container {
+  position: relative;
+  width: 100px;
+}
+.table-info .dropdown-container .page-select {
+  border: none;
+}
+.table-info .dropdown-container i {
+  position: absolute;
+  right: 45px;
+  top: 10px;
 }
 
 body {
   background-color: #ebf7fe;
-  font-family: 'Avenir', sans-serif;
+  font-family: "Avenir", sans-serif;
   overflow-x: hidden;
 }
 
 label {
-  font-family: 'Avenir-Medium', sans-serif !important;
+  font-family: "Avenir-Medium", sans-serif !important;
 }
 
-::-webkit-input-placeholder {
-  font-family: 'Avenir-Light', sans-serif !important;
+::-moz-placeholder {
+  font-family: "Avenir-Light", sans-serif !important;
   color: #707eae !important;
   opacity: 1;
   /* Firefox */
 }
 
 :-ms-input-placeholder {
-  font-family: 'Avenir-Light', sans-serif !important;
-  color: #707eae !important;
-  opacity: 1;
-  /* Firefox */
-}
-
-::-ms-input-placeholder {
-  font-family: 'Avenir-Light', sans-serif !important;
+  font-family: "Avenir-Light", sans-serif !important;
   color: #707eae !important;
   opacity: 1;
   /* Firefox */
 }
 
 ::placeholder {
-  font-family: 'Avenir-Light', sans-serif !important;
+  font-family: "Avenir-Light", sans-serif !important;
   color: #707eae !important;
   opacity: 1;
   /* Firefox */
@@ -74,13 +84,13 @@ label {
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  font-family: 'Avenir-Light', sans-serif !important;
+  font-family: "Avenir-Light", sans-serif !important;
   color: #707eae !important;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  font-family: 'Avenir-Light', sans-serif !important;
+  font-family: "Avenir-Light", sans-serif !important;
   color: #707eae !important;
 }
 
@@ -98,21 +108,18 @@ label {
 .filter-input {
   position: relative;
 }
-
 .search-input input,
 .filter-input input {
   padding: 12px 50px;
   border: 1px solid #e4e4e4;
   border-radius: 8px;
 }
-
 .search-input select,
 .filter-input select {
   padding: 12px 20px;
   border: 1px solid #e4e4e4;
   border-radius: 8px;
 }
-
 .search-input i,
 .filter-input i {
   position: absolute;
@@ -128,7 +135,6 @@ label {
   border-radius: 3rem;
   letter-spacing: 2px;
 }
-
 .btn-main:hover {
   background-color: #221241;
   color: #ffffff;
@@ -141,7 +147,6 @@ label {
   padding: 1em;
   font-size: 12px;
 }
-
 .btn-edit:hover {
   background-color: #a28ad3;
   color: #ffffff;
@@ -154,7 +159,6 @@ label {
   padding: 1em;
   font-size: 12px;
 }
-
 .btn-add-main:hover {
   background-color: #221241;
   color: #ffffff;
@@ -165,44 +169,30 @@ label {
   background-color: #4d3180;
   background-position-y: top;
 }
-
 #login-page .main-logo-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 12rem;
   padding-top: 5em;
 }
-
 #login-page .login-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 #login-page .login-card .card {
   width: 450px;
   border-radius: 10px;
   border: none;
 }
-
 #login-page .login-card .card .btn-fb {
   color: #ffffff;
   background-color: #2b3674;
 }
-
 #login-page .login-card .card .btn-fb:hover {
   background-color: #0c083b;
 }
-
 #login-page .login-card .card .btn-main-login {
   background-color: #4d3180;
   color: #ffffff;
@@ -210,11 +200,9 @@ label {
   border-radius: 3rem;
   letter-spacing: 2px;
 }
-
 #login-page .login-card .card .btn-main-login:hover {
   background-color: #221241;
 }
-
 #login-page .login-card .card .btn-done-register {
   background-color: #707eae;
   color: #ffffff;
@@ -222,23 +210,19 @@ label {
   border-radius: 3rem;
   letter-spacing: 2px;
 }
-
 #login-page .login-card .card .btn-done-register:hover {
   background-color: #1a2357;
 }
-
 #login-page .login-card .card .separator {
   padding: 2.5em 0;
   position: relative;
 }
-
 #login-page .login-card .card .separator .line {
   position: absolute;
   border: 1px solid #d3d3d3;
   width: 100%;
   top: 50%;
 }
-
 #login-page .login-card .card .separator .separator-text {
   position: absolute;
   z-index: 1;
@@ -246,28 +230,23 @@ label {
   top: 35%;
   left: 40%;
 }
-
 #login-page .login-card .card form#login-form {
   font-size: 14px;
   font-weight: 500;
   color: #2b3674;
 }
-
 #login-page .login-card .card form#login-form input {
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #e6e6e6;
 }
-
 #login-page .login-card .card form#login-form input:focus {
   background-color: #ececec;
 }
-
 #login-page .login-card .card form#login-form a {
   color: #2b3674;
   text-decoration: none;
 }
-
 #login-page footer {
   color: #2b3674;
 }
@@ -279,34 +258,28 @@ label {
 .page-content {
   margin: 40px 10px;
 }
-
 @media screen and (min-width: 768px) {
   .page-content {
     margin: 40px 20px 0 300px;
   }
 }
-
 .page-content .header-greeting p {
   color: #707eae;
 }
-
 .page-content .header-greeting h1 {
   color: #2b3674;
   letter-spacing: -1px;
 }
-
 .page-content .stats {
   color: #93b0c8;
   font-size: 14px;
-  font-family: 'Avenir-Medium';
+  font-family: "Avenir-Medium";
 }
-
 .page-content .num-count {
   color: #2b3674;
   font-size: 24px;
   font-weight: 600;
 }
-
 .page-content .stats-card .card {
   height: 97px;
   border: none;
@@ -314,108 +287,84 @@ label {
   border-radius: 1em;
   width: auto;
 }
-
 .page-content .stats-card .card .card-body {
   min-height: 97px;
 }
-
 .page-content .stats-card .card .card-body .icon-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 56px;
   height: 56px;
   border-radius: 100%;
   background-color: #f4f7fe;
   margin-right: 0.5em;
 }
-
 .page-content .stats-card .card .card-body .icon-holder i {
   color: #0075ff;
   font-size: 24px;
 }
-
 .page-content .stats-card #abbot {
   background-color: #4d3180;
   color: #ffffff;
 }
-
 @media screen and (max-width: 768px) {
   .page-content .main-chart {
     margin-top: 40px;
   }
 }
-
 @media screen and (min-width: 1366px) {
   .page-content .main-chart {
     padding-right: 40px;
   }
 }
-
 .page-content .main-chart .card {
   width: 100%;
   height: auto;
   border: none;
   border-radius: 1em;
 }
-
 .page-content .main-chart .card .card-body {
   padding: 2em;
 }
-
 .page-content .main-chart .card .card-body .dropdown__ {
   width: auto;
 }
-
 .page-content .main-chart .card .card-body .chart {
   border-top: 3px dashed #4318ff;
   width: 100%;
   position: relative;
 }
-
 .page-content .main-chart .card .card-body .chart::after {
-  content: '179';
+  content: "179";
   color: #4318ff;
   font-weight: 700;
   position: absolute;
   top: -12px;
 }
-
 .page-content .main-chart .card .card-body .chart img {
   width: 100%;
 }
-
 .page-content .patient-card .card {
   border: none !important;
   min-height: 500px;
   padding: 1em;
   border-radius: 8px;
 }
-
 .page-content .patient-card .card .title {
   color: #93b0c8;
 }
-
 .page-content .patient-card .table-responsive {
   border-top: 1px solid #e4e4e4;
 }
-
 .page-content .patient-card .table-responsive table {
   font-size: 12px;
   font-weight: 500;
 }
-
 .page-content .patient-card .table-responsive table th,
 .page-content .patient-card .table-responsive table td {
   color: #4d3180;
 }
-
 .page-content .patient-card .table-responsive .btn-details {
   background-color: #26d922;
   color: #ffffff;
@@ -423,13 +372,10 @@ label {
   padding: 10px 20px;
   font-size: 12px;
 }
-
 .page-content .patient-card .table-responsive .btn-details:hover {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: #239c21;
 }
-
 .page-content .patient-card .table-responsive .btn-delete {
   background-color: #eb5757;
   color: #ffffff;
@@ -437,25 +383,37 @@ label {
   padding: 10px 20px;
   font-size: 12px;
 }
-
 .page-content .patient-card .table-responsive .btn-delete:hover {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: #913030;
+}
+
+#searchPatient .modal-content {
+  border-radius: 18px;
+  border: none;
+}
+#searchPatient .modal-content .modal-top {
+  position: relative;
+}
+#searchPatient .modal-content .modal-top .btn-close {
+  position: absolute;
+  right: 0;
+  top: -35px;
+}
+#searchPatient .modal-content .table {
+  color: #2b3674;
 }
 
 #modalPatient .modal-content {
   border-radius: 18px;
   border: none;
 }
-
 #modalPatient input,
 #modalPatient select {
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #e4e4e4;
 }
-
 #modalPatient label {
   font-weight: 500;
   color: #2b3674;
@@ -465,22 +423,18 @@ label {
   border-radius: 18px;
   border: none;
 }
-
 #modalDetailPatient .detail-wrapper {
   border-left: 5px solid #4318ff;
   padding-left: 8px;
 }
-
 #modalDetailPatient .detail-wrapper .detail-title {
   color: #93b0c8;
 }
-
 #modalDetailPatient .detail-wrapper .detail-main-text {
   color: #2b3674;
   font-size: 16px;
   font-weight: 600;
 }
-
 #modalDetailPatient .milk-rec {
   border-radius: 18px;
   border: none;
@@ -494,21 +448,17 @@ label {
   background: #fff;
   border-radius: 8px;
 }
-
 .calc-wrapper h3 {
   color: #2b3674;
   font-weight: 600;
 }
-
 .calc-wrapper input {
   padding: 12px;
   border-radius: 8px;
 }
-
 .calc-wrapper input#patient-search {
   padding-left: 40px;
 }
-
 .calc-wrapper label {
   font-weight: 600;
   color: #2b3674;
@@ -520,19 +470,16 @@ label {
   border-radius: 8px;
   border: none;
 }
-
 .wrapper .card .thumbnail {
   position: relative;
   width: 100%;
   border-radius: 8px;
 }
-
 .wrapper .card .thumbnail img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-
 .wrapper .card .desc .duration {
   background: #e9edf7;
   color: #2b3674;
@@ -543,7 +490,6 @@ label {
   width: fit-content;
   border-radius: 4px;
 }
-
 .wrapper .card .desc .title {
   color: #2b3674;
   font-size: 16px;
@@ -556,29 +502,24 @@ label {
   border: none;
   border-radius: 8px;
 }
-
 #patient-details-card .card h3 {
   color: #2b3674;
   font-weight: 600;
 }
-
 #patient-details-card .card .wrapper-details .details h6 {
   color: #93b0c8;
 }
-
 #patient-details-card .card .wrapper-details .details .text-details {
   color: #2b3674;
   font-weight: 600;
 }
-
 @media screen and (max-width: 1366px) {
   #patient-details-card .card .wrapper-details .details .text-details {
     font-size: 12px;
   }
 }
-
 #patient-details-card .card .wrapper-details::before {
-  content: '-';
+  content: "-";
   background-color: #4318ff;
   color: #4318ff;
   font-weight: bold;
@@ -591,33 +532,27 @@ label {
   font-weight: 600;
   color: #2b3674;
 }
-
 #history-checkup .title {
   color: #93b0c8;
 }
-
 #history-checkup .card {
   border: none;
   border-radius: 8px;
 }
-
 #history-checkup .card .table-responsive {
   margin-top: 1em;
   border-top: 1px solid #e4e4e4;
 }
-
 #history-checkup .card .table-responsive .table th {
   color: #4d3180;
   font-size: 12px;
   font-weight: 600;
 }
-
 #history-checkup .card .table-responsive .table td {
   color: #4d3180;
   font-size: 12px;
   font-weight: 500;
 }
-
 #history-checkup .card .table-responsive .table .btn-details {
   background-color: #26d922;
   color: #ffffff;
@@ -625,9 +560,7 @@ label {
   padding: 10px 20px;
   font-size: 12px;
 }
-
 #history-checkup .card .table-responsive .table .btn-details:hover {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: #239c21;
 }
@@ -635,45 +568,34 @@ label {
 #pic {
   background-color: #2b3674;
 }
-
 #pic .btn-add-main {
   background-color: #4318ff;
 }
-
 #pic .btn-add-main:hover {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: #707eae;
 }
-
 #pic .pic-page {
   background-color: #2b3674;
 }
-
 #pic .pic-page h1,
 #pic .pic-page p {
   color: #ffffff;
 }
-
 #pic .pic-page .stats-card .card:hover {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   background-color: #4318ff;
   cursor: pointer;
 }
-
 #pic .pic-page .stats-card .card:hover .stats {
   color: #e9edf7;
   font-size: 14px;
 }
-
 #pic .pic-page .stats-card .card:hover .num-count {
   color: #ffffff;
   font-size: 24px;
   font-weight: 600;
 }
-
 #pic .patient-card h5 {
   color: #ffffff;
-}
-/*# sourceMappingURL=custom.css.map */
+}/*# sourceMappingURL=custom.css.map */

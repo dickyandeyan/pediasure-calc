@@ -115,11 +115,11 @@
             <div class="row">
                 <div class="col-sm-12 col-md-10">
                     <form action="#" id="rx-calc">
-                        <div class="calc-wrapper p-3">
+                        <div class="calc-wrapper p-4">
                             <h3 class="mb-3">Pediasure RX Calculator</h3>
                             <div class="form-group my-3">
                                 <div class="search-input d-flex">
-                                    <input type="text" name="patient" id="patient-search" class="form-control" placeholder="Nama Pasien">
+                                    <input onfocus="searchPatient()" type="text" name="patient" id="patient-search" class="form-control" placeholder="Nama Pasien">
                                     <i class="fas fa-search"></i>
                                     <div class="ms-3">
                                         <button class="btn btn-add-main px-5 text-nowrap" data-bs-toggle="modal" data-bs-target="#modalPatient">Tambah Pasien</button>
@@ -144,13 +144,127 @@
                             </div>
                         </div>
                         <div class="d-grid mt-3">
-                            <button class="btn btn-main py-2">MULAI HITUNG</button>
+                            <button class="btn btn-main py-2 avenir-light">MULAI HITUNG</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </div>
+
+    <div class="modal fade" id="searchPatient" tabindex="-1" aria-labelledby="searchPatientLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="p-4 modal-top">
+                    <button type="button" class="ms-auto btn-close rounded-circle border border-3 mb-3 border-dark" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="search-input d-flex">
+                        <input onfocus="searchPatient()" type="text" name="patient" id="patient-search" class="form-control" placeholder="Cari Pasien">
+                        <i class="fas fa-search"></i>
+                        <div class="ms-3">
+                            <button class="btn btn-add-main px-3 mt-1 text-nowrap" data-bs-toggle="modal" data-bs-target="#modalPatient">Tambah Pasien</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table align-middle text-center avenir-light">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Nama Lengkap</th>
+                                <th scope="col">Tanggal Lahir</th>
+                                <th scope="col">Umur</th>
+                                <th scope="col">No HP</th>
+                                <th scope="col">Terakhir Periksa</th>
+                                <th scope="col">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Ahmad Sanusi</td>
+                                <td>24 November 2021</td>
+                                <td>5 Tahun</td>
+                                <td>087287192879</td>
+                                <td>Sabtu, 05 Februari 2022, 15.20 WIB</td>
+                                <td><button class="btn btn-add-main px-3 mt-1 text-nowrap">Pilih Pasien</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-info">
+                    <h6 class="mb-0">Rows per page: </h6>
+                    <div class="dropdown-container">
+                        <select name="rows" id="pageRow" class="form-control page-select">
+                            <option value="7">7</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                        </select>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="mx-3">1-7 of 13</div>
+                    <button class="btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="modalPatient" tabindex="-1" aria-labelledby="modalPatientLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content p-4">
@@ -195,8 +309,7 @@
                 </form>
                 <div>
                     <div class="d-grid">
-                        <button type="button" class="btn btn-main py-3">SIMPAN DATA</button>
-                        <button type="button" class="m-0 btn btn-link" data-bs-dismiss="modal" aria-label="Close">Tutup</button>
+                        <button type="button" class="btn btn-main py-3 avenir-light">SIMPAN DATA</button>
                     </div>
                 </div>
             </div>
