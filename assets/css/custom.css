@@ -51,6 +51,34 @@
   top: 10px;
 }
 
+.rounded-1 {
+  border-radius: 18px;
+  border: none;
+}
+
+.modal-top {
+  position: relative;
+}
+.modal-top .btn-close {
+  position: absolute;
+  right: 0;
+  top: -35px;
+}
+
+.detail-wrapper {
+  border-left: 5px solid #4318ff;
+  padding-left: 8px;
+}
+.detail-wrapper .detail-title {
+  color: #93b0c8;
+  font-family: "Avenir-Light", sans-serif !important;
+}
+.detail-wrapper .detail-main-text {
+  color: #2b3674;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 body {
   background-color: #ebf7fe;
   font-family: "Avenir", sans-serif;
@@ -140,6 +168,16 @@ label {
   color: #ffffff;
 }
 
+.btn-main-alt {
+  background-color: #4d3180;
+  color: #ffffff;
+  font-family: "Avenir-Light", sans-serif !important;
+}
+.btn-main-alt:hover {
+  background-color: #221241;
+  color: #ffffff;
+}
+
 .btn-edit {
   background-color: #93b0c8;
   color: #ffffff;
@@ -162,6 +200,16 @@ label {
 .btn-add-main:hover {
   background-color: #221241;
   color: #ffffff;
+}
+
+.btn-wa {
+  background-color: #26d922;
+  color: #ffffff;
+  font-family: "Avenir-Light", sans-serif !important;
+}
+.btn-wa:hover {
+  background-color: #30a02f;
+  color: white;
 }
 
 #login-page .login-top {
@@ -392,14 +440,6 @@ label {
   border-radius: 18px;
   border: none;
 }
-#searchPatient .modal-content .modal-top {
-  position: relative;
-}
-#searchPatient .modal-content .modal-top .btn-close {
-  position: absolute;
-  right: 0;
-  top: -35px;
-}
 #searchPatient .modal-content .table {
   color: #2b3674;
 }
@@ -422,18 +462,6 @@ label {
 #modalDetailPatient .modal-content {
   border-radius: 18px;
   border: none;
-}
-#modalDetailPatient .detail-wrapper {
-  border-left: 5px solid #4318ff;
-  padding-left: 8px;
-}
-#modalDetailPatient .detail-wrapper .detail-title {
-  color: #93b0c8;
-}
-#modalDetailPatient .detail-wrapper .detail-main-text {
-  color: #2b3674;
-  font-size: 16px;
-  font-weight: 600;
 }
 #modalDetailPatient .milk-rec {
   border-radius: 18px;
@@ -563,6 +591,34 @@ label {
 #history-checkup .card .table-responsive .table .btn-details:hover {
   transition: 0.5s ease;
   background-color: #239c21;
+}
+
+#resultModal .data-result {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+#resultModal .data-result .dropdown-container {
+  position: relative;
+}
+#resultModal .data-result .dropdown-container .result-dropdown {
+  border-radius: 8px;
+  padding: 10px 6px;
+  font-family: "Avenir-Light", sans-serif !important;
+}
+#resultModal .data-result .dropdown-container i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+#resultModal .data-result .milk-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px dashed #2b3674;
+  min-height: 384px;
+  border-radius: 1em;
+  background-color: #e9edf7;
 }
 
 #pic {

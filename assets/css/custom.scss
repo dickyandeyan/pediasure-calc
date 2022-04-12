@@ -59,26 +59,56 @@
 }
 
 .table-info {
-   display: flex;
-   align-items: center;
-   justify-content: end;
-   padding-right: 1em;
-   @include avenirMedium;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding-right: 1em;
+	@include avenirMedium;
 
-   .dropdown-container {
-      position: relative;
-      width: 100px;
+	.dropdown-container {
+		position: relative;
+		width: 100px;
 
-      .page-select {
-         border: none;
-      }
+		.page-select {
+			border: none;
+		}
 
-      i {
-         position: absolute;
-         right: 45px;
-         top: 10px;
-      }
-   }
+		i {
+			position: absolute;
+			right: 45px;
+			top: 10px;
+		}
+	}
+}
+
+.rounded-1 {
+	@include rounded-1;
+}
+
+.modal-top {
+	position: relative;
+
+	.btn-close {
+		position: absolute;
+		right: 0;
+		top: -35px;
+	}
+}
+
+.detail-wrapper {
+	border-left: 5px solid $blue-dark;
+	padding-left: 8px;
+
+	.detail-title {
+		color: $gray;
+		@include avenirLight;
+	}
+
+	.detail-main-text {
+		color: $black-soft-1;
+		font-size: 16px;
+		font-weight: 600;
+	}
 }
 
 body {
@@ -154,6 +184,17 @@ label {
 	}
 }
 
+.btn-main-alt {
+	background-color: $pedia-color;
+	color: $white;
+   @include avenirLight;
+   
+	&:hover {
+		background-color: #221241;
+		color: $white;
+	}
+}
+
 .btn-edit {
 	background-color: $gray;
 	color: $white;
@@ -178,6 +219,17 @@ label {
 		background-color: #221241;
 		color: $white;
 	}
+}
+
+.btn-wa {
+	background-color: $green;
+   color: $white;
+   @include avenirLight;
+
+   &:hover{
+      background-color: #30a02f;
+      color: white;
+   }
 }
 
 #login-page {
@@ -443,25 +495,13 @@ label {
 }
 
 #searchPatient {
-   .modal-content {
-      @include rounded-1;
-   .modal-top {
-      position: relative;
+	.modal-content {
+		@include rounded-1;
 
-      .btn-close {
-         position: absolute;
-         right: 0;
-         top: -35px;
-      }
-   }
-   
-   .table {
-      color: $black-soft-1
-   }
-
-   
-
-   }
+		.table {
+			color: $black-soft-1;
+		}
+	}
 }
 
 #modalPatient {
@@ -485,21 +525,6 @@ label {
 #modalDetailPatient {
 	.modal-content {
 		@include rounded-1;
-	}
-
-	.detail-wrapper {
-		border-left: 5px solid $blue-dark;
-		padding-left: 8px;
-
-		.detail-title {
-			color: $gray;
-		}
-
-		.detail-main-text {
-			color: $black-soft-1;
-			font-size: 16px;
-			font-weight: 600;
-		}
 	}
 
 	.milk-rec {
@@ -660,17 +685,50 @@ label {
 	}
 }
 
+#resultModal {
+	.data-result {
+		max-height: 500px;
+		overflow-y: scroll;
+		.dropdown-container {
+			position: relative;
+
+			.result-dropdown {
+				border-radius: 8px;
+				padding: 10px 6px;
+				@include avenirLight;
+			}
+
+			i {
+				position: absolute;
+				right: 20px;
+				top: 15px;
+			}
+		}
+
+		.milk-result {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border: 1px dashed $black-soft-1;
+			min-height: 384px;
+			border-radius: 1em;
+			background-color: $gray-soft-2;
+		}
+	}
+}
+
 #pic {
 	background-color: $black-soft-1;
 
-   .btn-add-main {
-      background-color: $blue-dark;
+	.btn-add-main {
+		background-color: $blue-dark;
 
-      &:hover {
-         transition: .5s ease;
-         background-color: $black-soft-2;
-      }
-   }   
+		&:hover {
+			transition: 0.5s ease;
+			background-color: $black-soft-2;
+		}
+	}
 
 	.pic-page {
 		background-color: $black-soft-1;
@@ -703,9 +761,9 @@ label {
 		}
 	}
 
-   .patient-card {
-      h5 {
-         color: $white;
-      }
-   }
+	.patient-card {
+		h5 {
+			color: $white;
+		}
+	}
 }
