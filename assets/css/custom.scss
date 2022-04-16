@@ -60,12 +60,16 @@
 
 body {
 	background-color: #ebf7fe;
-	font-family: 'Avenir', sans-serif;
+	font-family: 'Avenir-Medium', sans-serif;
 	overflow-x: hidden;
 }
 
 label {
 	@include avenirMedium;
+}
+
+input, select {
+	color: $black-soft-1;
 }
 
 ::placeholder {
@@ -204,14 +208,18 @@ label {
 			}
 
 			.btn-done-register {
-				background-color: $black-soft-2;
+				background-color: $pedia-color;
 				color: $white;
 				font-weight: 600;
 				border-radius: 3rem;
 				letter-spacing: 2px;
 
 				&:hover {
-					background-color: #1a2357;
+					background-color: #221241;
+				}
+
+				&:disabled {
+					background-color: $black-soft-2;
 				}
 			}
 
@@ -239,10 +247,11 @@ label {
 				font-weight: 500;
 				color: $black-soft-1;
 
-				input {
+				input, select {
 					border-radius: 8px;
 					padding: 10px;
 					border: 1px solid #e6e6e6;
+					color: $black-soft-1;
 
 					&:focus {
 						background-color: #ececec;

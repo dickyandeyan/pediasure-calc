@@ -36,12 +36,16 @@
 
 body {
   background-color: #ebf7fe;
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Avenir-Medium', sans-serif;
   overflow-x: hidden;
 }
 
 label {
   font-family: 'Avenir-Medium', sans-serif !important;
+}
+
+input, select {
+  color: #2b3674;
 }
 
 ::-webkit-input-placeholder {
@@ -216,7 +220,7 @@ label {
 }
 
 #login-page .login-card .card .btn-done-register {
-  background-color: #707eae;
+  background-color: #4d3180;
   color: #ffffff;
   font-weight: 600;
   border-radius: 3rem;
@@ -224,7 +228,11 @@ label {
 }
 
 #login-page .login-card .card .btn-done-register:hover {
-  background-color: #1a2357;
+  background-color: #221241;
+}
+
+#login-page .login-card .card .btn-done-register:disabled {
+  background-color: #707eae;
 }
 
 #login-page .login-card .card .separator {
@@ -253,13 +261,14 @@ label {
   color: #2b3674;
 }
 
-#login-page .login-card .card form#login-form input {
+#login-page .login-card .card form#login-form input, #login-page .login-card .card form#login-form select {
   border-radius: 8px;
   padding: 10px;
   border: 1px solid #e6e6e6;
+  color: #2b3674;
 }
 
-#login-page .login-card .card form#login-form input:focus {
+#login-page .login-card .card form#login-form input:focus, #login-page .login-card .card form#login-form select:focus {
   background-color: #ececec;
 }
 

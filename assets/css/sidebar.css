@@ -79,11 +79,12 @@
 }
 
 .nav-sidebar .doc-profile .doc-stats #name {
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .nav-sidebar .doc-profile .doc-stats #no-profesi {
   font-weight: 400;
+  font-size: 12px;
 }
 
 .nav-sidebar .menu-list {
