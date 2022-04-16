@@ -88,3 +88,9 @@ function resizeListener() {
 window.addEventListener('resize', resizeListener)
 
 
+let searchPatientModal = new bootstrap.Modal(document.getElementById('searchPatient'))
+
+const searchPatient = () => {
+   searchPatientModal.show()
+}
+

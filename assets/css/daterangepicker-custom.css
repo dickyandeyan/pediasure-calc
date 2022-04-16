@@ -25,10 +25,8 @@
   border-radius: 1em;
   padding: 10px 40px !important;
 }
-
 .btnDate:hover {
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   background-color: #7253a8;
   color: #ffffff;
 }
@@ -38,15 +36,12 @@
   border-radius: 1em;
   padding: 10px 40px !important;
 }
-
 .btnCancel:hover {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: #e4e4e4;
 }
 
 .active {
   background-color: #4d3180 !important;
   border-radius: 3em !important;
-}
-/*# sourceMappingURL=daterangepicker-custom.css.map */
+}/*# sourceMappingURL=daterangepicker-custom.css.map */

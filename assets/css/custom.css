@@ -34,6 +34,77 @@
   font-family: 'Avenir-Light', sans-serif;
 }
 
+.table-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 1em;
+  font-family: 'Avenir-Medium', sans-serif !important;
+}
+
+.table-info .dropdown-container {
+  position: relative;
+}
+
+.table-info .dropdown-container .page-select {
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.table-info .dropdown-container i {
+  position: absolute;
+  right: 45px;
+  top: 10px;
+}
+
+.table-info .paging-of {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rounded-1 {
+  border-radius: 18px;
+  border: none;
+}
+
+.modal-top {
+  position: relative;
+}
+
+.modal-top .btn-close {
+  position: absolute;
+  right: 0;
+  top: -35px;
+}
+
+.detail-wrapper .detail-title {
+  color: #93b0c8;
+  font-family: 'Avenir-Medium', sans-serif !important;
+}
+
+.detail-wrapper .detail-main-text {
+  color: #2b3674;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detail-wrapper::before {
+  content: '-';
+  background-color: #4318ff;
+  color: #4318ff;
+  font-weight: bold;
+  font-size: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+}
+
 body {
   background-color: #ebf7fe;
   font-family: 'Avenir-Medium', sans-serif;
@@ -45,7 +116,7 @@ label {
 }
 
 input, select {
-  color: #2b3674;
+  color: #2b3674 !important;
 }
 
 ::-webkit-input-placeholder {
@@ -128,12 +199,23 @@ input, select {
 .btn-main {
   background-color: #4d3180;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: normal;
   border-radius: 3rem;
   letter-spacing: 2px;
 }
 
 .btn-main:hover {
+  background-color: #221241;
+  color: #ffffff;
+}
+
+.btn-main-alt {
+  background-color: #4d3180;
+  color: #ffffff;
+  font-family: 'Avenir-Light', sans-serif !important;
+}
+
+.btn-main-alt:hover {
   background-color: #221241;
   color: #ffffff;
 }
@@ -162,6 +244,17 @@ input, select {
 .btn-add-main:hover {
   background-color: #221241;
   color: #ffffff;
+}
+
+.btn-wa {
+  background-color: #26d922;
+  color: #ffffff;
+  font-family: 'Avenir-Light', sans-serif !important;
+}
+
+.btn-wa:hover {
+  background-color: #30a02f;
+  color: white;
 }
 
 #login-page .login-top {
@@ -320,7 +413,7 @@ input, select {
   height: 97px;
   border: none;
   margin: 0 0 10px;
-  border-radius: 1em;
+  border-radius: 8px;
   width: auto;
 }
 
@@ -371,7 +464,7 @@ input, select {
   width: 100%;
   height: auto;
   border: none;
-  border-radius: 1em;
+  border-radius: 8px;
 }
 
 .page-content .main-chart .card .card-body {
@@ -403,7 +496,6 @@ input, select {
 .page-content .patient-card .card {
   border: none !important;
   min-height: 500px;
-  padding: 1em;
   border-radius: 8px;
 }
 
@@ -416,8 +508,9 @@ input, select {
 }
 
 .page-content .patient-card .table-responsive table {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
+  border-collapse: inherit;
 }
 
 .page-content .patient-card .table-responsive table th,
@@ -453,6 +546,15 @@ input, select {
   background-color: #913030;
 }
 
+#searchPatient .modal-content {
+  border-radius: 18px;
+  border: none;
+}
+
+#searchPatient .modal-content .table {
+  color: #2b3674;
+}
+
 #modalPatient .modal-content {
   border-radius: 18px;
   border: none;
@@ -473,21 +575,6 @@ input, select {
 #modalDetailPatient .modal-content {
   border-radius: 18px;
   border: none;
-}
-
-#modalDetailPatient .detail-wrapper {
-  border-left: 5px solid #4318ff;
-  padding-left: 8px;
-}
-
-#modalDetailPatient .detail-wrapper .detail-title {
-  color: #93b0c8;
-}
-
-#modalDetailPatient .detail-wrapper .detail-main-text {
-  color: #2b3674;
-  font-size: 16px;
-  font-weight: 600;
 }
 
 #modalDetailPatient .milk-rec {
@@ -615,15 +702,19 @@ input, select {
   border-top: 1px solid #e4e4e4;
 }
 
+#history-checkup .card .table-responsive .table {
+  border-collapse: inherit;
+}
+
 #history-checkup .card .table-responsive .table th {
-  color: #4d3180;
-  font-size: 12px;
+  color: #2b3674;
+  font-size: 14px;
   font-weight: 600;
 }
 
 #history-checkup .card .table-responsive .table td {
-  color: #4d3180;
-  font-size: 12px;
+  color: #2b3674;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -641,6 +732,47 @@ input, select {
   background-color: #239c21;
 }
 
+#resultModal .data-result {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+#resultModal .data-result .dropdown-container {
+  position: relative;
+}
+
+#resultModal .data-result .dropdown-container .result-dropdown {
+  border-radius: 8px;
+  padding: 10px 6px;
+  font-family: 'Avenir-Light', sans-serif !important;
+}
+
+#resultModal .data-result .dropdown-container i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+#resultModal .data-result .milk-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px dashed #2b3674;
+  min-height: 384px;
+  border-radius: 1em;
+  background-color: #e9edf7;
+}
+
 #pic {
   background-color: #2b3674;
 }
@@ -650,8 +782,8 @@ input, select {
 }
 
 #pic .btn-add-main:hover {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   background-color: #707eae;
 }
 
@@ -662,6 +794,14 @@ input, select {
 #pic .pic-page h1,
 #pic .pic-page p {
   color: #ffffff;
+}
+
+#pic .pic-page .stats-card .card.active {
+  background-color: #4318ff;
+}
+
+#pic .pic-page .stats-card .card.active .stats {
+  color: white;
 }
 
 #pic .pic-page .stats-card .card:hover {
@@ -684,5 +824,19 @@ input, select {
 
 #pic .patient-card h5 {
   color: #ffffff;
+}
+
+.nav-pills .nav-link {
+  border-radius: 8px;
+  background-color: #F8F7FA;
+  color: #93b0c8;
+}
+
+.nav-pills .nav-link .active {
+  background-color: #4318ff;
+}
+
+.nav-pills .show > .nav-link {
+  background-color: #4318ff;
 }
 /*# sourceMappingURL=custom.css.map */

@@ -58,6 +58,76 @@
 	font-family: 'Avenir-Light', sans-serif;
 }
 
+.table-info {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding-right: 1em;
+	@include avenirMedium;
+
+	.dropdown-container {
+		position: relative;
+		// width: 100px;
+
+		.page-select {
+			border: none;
+			font-size: 13px;
+			font-weight: bold;
+		}
+
+		i {
+			position: absolute;
+			right: 45px;
+			top: 10px;
+		}
+	}
+
+	.paging-of {
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
+.rounded-1 {
+	@include rounded-1;
+}
+
+.modal-top {
+	position: relative;
+
+	.btn-close {
+		position: absolute;
+		right: 0;
+		top: -35px;
+	}
+}
+
+.detail-wrapper {
+	// border-left: 5px solid $blue-dark;
+	// padding-left: 8px;
+
+	.detail-title {
+		color: $gray;
+		@include avenirMedium;
+	}
+
+	.detail-main-text {
+		color: $black-soft-1;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&::before {
+		content: '-';
+		background-color: $blue-dark;
+		color: $blue-dark;
+		font-weight: bold;
+		font-size: 10px;
+		margin-right: 8px;
+		border-radius: 10px;
+	}
+}
+
 body {
 	background-color: #ebf7fe;
 	font-family: 'Avenir-Medium', sans-serif;
@@ -69,7 +139,7 @@ label {
 }
 
 input, select {
-	color: $black-soft-1;
+	color: $black-soft-1!important;
 }
 
 ::placeholder {
@@ -125,10 +195,21 @@ input, select {
 .btn-main {
 	background-color: $pedia-color;
 	color: $white;
-	font-weight: 600;
+	font-weight: normal;
 	border-radius: 3rem;
 	letter-spacing: 2px;
 
+	&:hover {
+		background-color: #221241;
+		color: $white;
+	}
+}
+
+.btn-main-alt {
+	background-color: $pedia-color;
+	color: $white;
+   @include avenirLight;
+   
 	&:hover {
 		background-color: #221241;
 		color: $white;
@@ -159,6 +240,17 @@ input, select {
 		background-color: #221241;
 		color: $white;
 	}
+}
+
+.btn-wa {
+	background-color: $green;
+   color: $white;
+   @include avenirLight;
+
+   &:hover{
+      background-color: #30a02f;
+      color: white;
+   }
 }
 
 #login-page {
@@ -307,7 +399,7 @@ input, select {
 			height: 97px;
 			border: none;
 			margin: 0 0 10px;
-			border-radius: 1em;
+			border-radius: 8px;
 			width: auto;
 
 			.card-body {
@@ -348,7 +440,7 @@ input, select {
 			width: 100%;
 			height: auto;
 			border: none;
-			border-radius: 1em;
+			border-radius: 8px;
 
 			.card-body {
 				padding: 2em;
@@ -380,7 +472,7 @@ input, select {
 		.card {
 			border: none !important;
 			min-height: 500px;
-			padding: 1em;
+			// padding: 1em;
 			border-radius: 8px;
 			.title {
 				color: $gray;
@@ -391,8 +483,9 @@ input, select {
 			border-top: 1px solid $gray-soft-1;
 
 			table {
-				font-size: 12px;
+				font-size: 14px;
 				font-weight: 500;
+				border-collapse: inherit;
 				th,
 				td {
 					color: $pedia-color;
@@ -428,6 +521,16 @@ input, select {
 	}
 }
 
+#searchPatient {
+	.modal-content {
+		@include rounded-1;
+
+		.table {
+			color: $black-soft-1;
+		}
+	}
+}
+
 #modalPatient {
 	.modal-content {
 		@include rounded-1;
@@ -449,21 +552,6 @@ input, select {
 #modalDetailPatient {
 	.modal-content {
 		@include rounded-1;
-	}
-
-	.detail-wrapper {
-		border-left: 5px solid $blue-dark;
-		padding-left: 8px;
-
-		.detail-title {
-			color: $gray;
-		}
-
-		.detail-main-text {
-			color: $black-soft-1;
-			font-size: 16px;
-			font-weight: 600;
-		}
 	}
 
 	.milk-rec {
@@ -596,15 +684,16 @@ input, select {
 			margin-top: 1em;
 			border-top: 1px solid $gray-soft-1;
 			.table {
+				border-collapse: inherit;
 				th {
-					color: $pedia-color;
-					font-size: 12px;
+					color: $black-soft-1;
+					font-size: 14px;
 					font-weight: 600;
 				}
 
 				td {
-					color: $pedia-color;
-					font-size: 12px;
+					color: $black-soft-1;
+					font-size: 14px;
 					font-weight: 500;
 				}
 				.btn-details {
@@ -624,17 +713,50 @@ input, select {
 	}
 }
 
+#resultModal {
+	.data-result {
+		max-height: 500px;
+		overflow-y: scroll;
+		.dropdown-container {
+			position: relative;
+
+			.result-dropdown {
+				border-radius: 8px;
+				padding: 10px 6px;
+				@include avenirLight;
+			}
+
+			i {
+				position: absolute;
+				right: 20px;
+				top: 15px;
+			}
+		}
+
+		.milk-result {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border: 1px dashed $black-soft-1;
+			min-height: 384px;
+			border-radius: 1em;
+			background-color: $gray-soft-2;
+		}
+	}
+}
+
 #pic {
 	background-color: $black-soft-1;
 
-   .btn-add-main {
-      background-color: $blue-dark;
+	.btn-add-main {
+		background-color: $blue-dark;
 
-      &:hover {
-         transition: .5s ease;
-         background-color: $black-soft-2;
-      }
-   }   
+		&:hover {
+			transition: 0.5s ease;
+			background-color: $black-soft-2;
+		}
+	}
 
 	.pic-page {
 		background-color: $black-soft-1;
@@ -646,6 +768,12 @@ input, select {
 
 		.stats-card {
 			.card {
+				&.active {
+					background-color: $blue-dark;
+					.stats {
+						color: white;
+					}
+				}
 				&:hover {
 					transition: 0.5s ease;
 					background-color: $blue-dark;
@@ -667,9 +795,26 @@ input, select {
 		}
 	}
 
-   .patient-card {
-      h5 {
-         color: $white;
-      }
-   }
+	.patient-card {
+		h5 {
+			color: $white;
+		}
+	}
+}
+
+// override nav
+.nav-pills {
+	.nav-link {
+		border-radius: 8px;
+		background-color: #F8F7FA;
+		color: $gray;
+		.active {
+			background-color: $blue-dark;
+		}
+	}
+	.show > {
+		.nav-link {
+			background-color: $blue-dark;
+		}
+	}
 }
