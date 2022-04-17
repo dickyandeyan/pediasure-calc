@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- Custom css -->
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/daterangepicker-custom.css">
+    <!-- <link rel="stylesheet" href="assets/css/daterangepicker-custom.css"> -->
     <link rel="stylesheet" href="assets/css/sidebar.css">
     <link rel="stylesheet" href="assets/css/custom_dropdown.css">
     <!-- Font Awesome 5.15 -->
@@ -155,113 +155,152 @@
                         <h1 class="fw-bolder text-white">Pasien Detail</h1>
                     </div>
                     <div class="col-sm-12 col-md-6 text-md-end">
-                        <button class="btn btn-edit mb-2" data-bs-toggle="modal" data-bs-target="#modalPatient">Edit Data</button>
+                        <button class="btn btn-edit mb-2 px-4 me-2" data-bs-toggle="modal" data-bs-target="#modalPatient">Edit Data</button>
                         <button type="button" class="btn btn-add-main px-5 mb-2">Kembali</button>
                     </div>
                 </div>
             </div>
             <section id="patient-details-card">
                 <div class="card p-4">
-                    <h3 class="mb-3">Ahmad Sanusi</h3>
                     <div class="row">
-                        <div class="col-sm-12 col-md-2 mb-2">
-                            <div class="wrapper-details d-flex">
-                                <div class="details">
-                                    <h6>Umur</h6>
-                                    <div class="text-details">5 Tahun 2 Bulan</div>
+                        <div class="col-12 col-md-4">
+                            <div class="label-1 avenir-light" style="color: #93b0c8;">Orang Tua / Wali</div>
+                            <h3 class="title-text fw-bold">Ahmad Sanusi</h3>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="label-1 avenir-light" style="color: #93b0c8;">Anak</div>
+                            <h3 class="title-text fw-bold">Randika</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">No HP (WhatsApp)</div>
+                                    <div class="detail-main-text">089766675689</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-auto mb-2">
-                            <div class="wrapper-details d-flex">
-                                <div class="details">
-                                    <h6>Tanggal Lahir</h6>
-                                    <div class="text-details">24 November 2016</div>
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Umur</div>
+                                    <div class="detail-main-text">5 Tahun 2 Bulan</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-auto mb-2">
-                            <div class="wrapper-details d-flex">
-                                <div class="details">
-                                    <h6>No HP (WhatsApp)</h6>
-                                    <div class="text-details">08999766262</div>
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Tanggal Lahir</div>
+                                    <div class="detail-main-text">24 November 2016</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-auto mb-2">
-                            <div class="wrapper-details d-flex">
-                                <div class="details">
-                                    <h6>Terakhir Periksa</h6>
-                                    <div class="text-details">Sabtu, 29 Oktober 2021 Pkl. 15.20 WIB</div>
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Jenis Kelamin</div>
+                                    <div class="detail-main-text">Perempuan</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Status Kelahiran</div>
+                                    <div class="detail-main-text">Normal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Catatan Tambahan</div>
+                                    <div class="detail-main-text">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-sm-12 mb-2">
+                            <div class="detail-wrapper d-flex">
+                                <div>
+                                    <div class="detail-title">Terakhir Periksa</div>
+                                    <div class="detail-main-text">Sabtu, 29 Oktober 2021 Pkl. 15.20 WIB</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            <section id="history-checkup">
-                <h3 class="mt-5 text-white">Riwayat Periksa</h3>
+    
+            <section id="history-checkup" class="mb-5">
+                <h3 class="mt-5 mb-3 text-white">Riwayat Periksa</h3>
                 <div class="row">
                     <div class="col-12">
-                        <div class="card p-3">
-                            <div class="title mb-2">Pilih Tanggal Periksa</div>
-                            <input type="text" name="daterange" class="form-control" />
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Terakhir Periksa</th>
-                                            <th>Berat Badan</th>
-                                            <th>Tinggi Badan</th>
-                                            <th>Lingkar Kepala</th>
-                                            <th>Aksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="align-middle">
-                                            <td class="text-center ">1</td>
-                                            <td>Sabtu, 29 Oktober 2021 Pkl. 15.20 WI</td>
-                                            <td>
-                                                Berat : 11.23 Kg
-                                                Gizi Baik
-                                                Pantau ulang berat badan
-                                                dan panjang/tinggi badan
-                                                berkala</td>
-                                            <td>
-                                                Tinggi : 79.6 cm
-                                                Perawakan Normal
-                                                Pantau ulang panjang/tinggi
-                                                badan berkala
-                                            </td>
-                                            <td>
-                                                Lingkar : 43 cm
-                                                Lingkar Kepala Normal
-                                                Pantau ulang lingkar
-                                                kepala berkala
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-details my-2 text-nowrap" data-bs-toggle="modal" data-bs-target="#modalDetailPatient"><i class="far fa-edit me-2"></i>Lihat Detail</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="card">
+                            <div class="card-body pb-0">
+                                <div class="title mb-2">Pilih Tanggal Periksa</div>
+                                <input type="text" name="daterange" class="form-control" />
                             </div>
-                            <div class="table-info">
-                              <h6 class="mb-0">Rows per page: </h6>
-                              <div class="dropdown-container">
-                                  <select name="rows" id="pageRow" class="form-control page-select">
-                                      <option value="7">7</option>
-                                      <option value="10">10</option>
-                                      <option value="15">15</option>
-                                  </select>
-                                  <i class="fas fa-chevron-down"></i>
-                              </div>
-                              <div class="mx-3">1-7 of 13</div>
-                              <button class="btn"><i class="fas fa-chevron-left"></i></button>
-                              <button class="btn"><i class="fas fa-chevron-right"></i></button>
-                          </div>
+                            <div class="card-body pt-0 px-0">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td>No</td>
+                                                <td>Terakhir Periksa</td>
+                                                <td>Berat Badan</td>
+                                                <td>Tinggi Badan</td>
+                                                <td>Lingkar Kepala</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="align-middle">
+                                                <td class="text-center ">1</td>
+                                                <td>Sabtu, 29 Oktober 2021 Pkl. 15.20 WI</td>
+                                                <td>
+                                                    Berat : 11.23 Kg
+                                                    Gizi Baik
+                                                    Pantau ulang berat badan
+                                                    dan panjang/tinggi badan
+                                                    berkala</td>
+                                                <td>
+                                                    Tinggi : 79.6 cm
+                                                    Perawakan Normal
+                                                    Pantau ulang panjang/tinggi
+                                                    badan berkala
+                                                </td>
+                                                <td>
+                                                    Lingkar : 43 cm
+                                                    Lingkar Kepala Normal
+                                                    Pantau ulang lingkar
+                                                    kepala berkala
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-details my-2 text-nowrap" data-bs-toggle="modal" data-bs-target="#resultModal"><i class="far fa-eye me-2"></i>Lihat Detail</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-info">
+                                    <h7 class="mb-0 text-muted"><small>Rows per page: </small></h7>
+                                    <div class="dropdown-container">
+                                        <select name="rows" id="pageRow" class="form-select page-select">
+                                            <option value="7">7</option>
+                                            <option value="10">10</option>
+                                            <option value="15">15</option>
+                                        </select>
+                                        <!-- <i class="fas fa-chevron-down"></i> -->
+                                    </div>
+                                    <div class="mx-3 paging-of"><small>1-7 of 13</small></div>
+                                    <button class="btn" disabled><i class="fas fa-chevron-left"></i></button>
+                                    <button class="btn"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -273,30 +312,39 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content p-4">
                 <div class="d-flex ">
-                    <h4 class="d-inline fw-bold title-text mb-4">Edit Pasien</h4>
+                    <h4 class="d-inline fw-bold title-text mb-4">Tambah Pasien</h4>
                     <button type="button" class="ms-auto btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <h5 class="fw-bold title-text mb-3">Identitas Orang Tua / Wali</h5>
                 <form action="#" id="modal-form-patient">
                     <div class="form-group mb-3">
-                        <label for="birthStatus" class="mb-1">Nama Lengkap Orang Tua / Wali</label>
-                        <input type="text" name="namePatient" class="form-control" placeholder="Masukkan Nama Lengkap" id="namePatient">
+                        <label for="birthStatus" class="mb-1">Nama Lengkap Orang Tua / Wali <code>(*)</code></label>
+                        <input type="text" name="namePatient" class="form-control" placeholder="Masukkan Nama Lengkap" id="namePatient" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="phonePatient" class="mb-1">No HP (WhatsApp)</label>
-                        <input type="text" name="namePatient" class="form-control" placeholder="Masukkan Nomer Handphone" id="phonePatient">
+                        <label for="phonePatient" class="mb-1">No HP (WhatsApp) <code>(*)</code></label>
+                        <div class="row">
+                            <div class="col-2 pe-1">
+                                <select name="" id="" class="form-select" required>
+                                    <option value="62">+62</option>
+                                </select>
+                            </div>
+                            <div class="col ps-1">
+                                <input type="number" name="namePatient" class="form-control" placeholder="Contoh: 82123456789" id="phonePatient" required>
+                            </div>
+                        </div>
                     </div>
                     <h5 class="fw-bold title-text mb-3">Identitas Anak</h5>
                     <div class="form-group mb-3">
-                        <label for="childName" class="mb-1">Nama Lengkap Anak</label>
-                        <input type="text" name="childName" class="form-control" placeholder="Masukkan Nama Anak" id="childName">
+                        <label for="childName" class="mb-1">Nama Lengkap Anak <code>(*)</code></label>
+                        <input type="text" name="childName" class="form-control" placeholder="Masukkan Nama Anak" id="childName" required>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="birthdatePatient" class="mb-1">Tanggal Lahir</label>
-                        <input type="date" name="birthdate" class="form-control" placeholder="DD/MM/YYYY" id="birthdatePatient">
+                        <label for="birthdatePatient" class="mb-1">Tanggal Lahir <code>(*)</code></label>
+                        <input type="date" name="birthdate" class="form-control" placeholder="DD/MM/YYYY" id="birthdatePatient" required>
                     </div>
                     <div class="form-group mb-3">
-                        <select name="genderPatient" id="" class="form-control mt-3">
+                        <select name="genderPatient" id="" class="form-select mt-3" required>
                             <option value="0">Pilih Jenis Kelamin</option>
                             <option value="L">Laki-Laki</option>
                             <option value="P">Perempuan</option>
@@ -313,171 +361,302 @@
                 </form>
                 <div>
                     <div class="d-grid">
-                        <button type="button" class="btn btn-main py-3">SIMPAN DATA</button>
-                        <button type="button" class="m-0 btn btn-link" data-bs-dismiss="modal" aria-label="Close">Tutup</button>
+                        <button type="button" class="btn btn-main py-3 mb-3">SIMPAN DATA</button>
+                        <button type="button" class="m-0 btn btn-edit" data-bs-dismiss="modal" aria-label="Close">TUTUP</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalDetailPatient" tabindex="-1" aria-labelledby="modalDetailPatientLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content p-4">
-                <button type="button" class="ms-auto btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h3 class="fw-bold title-text">Hasil Pemeriksaan</h3>
-                <div class="row">
-                    <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-12 mb-3">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">Tanggal Periksa</div>
-                                    <div class="detail-main-text">Sabtu, 2 April 2022 Pkl 15.20 WIB</div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">Umur</div>
-                                    <div class="detail-main-text">5 Tahun 6 Bulan</div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">Berat Badan</div>
-                                    <div class="detail-main-text">10 Kg</div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">Tinggi Badan</div>
-                                    <div class="detail-main-text">76 cm</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-12 my-3">
-                                <h5 class="title-text fw-bold">1. Penilaian Status Nutrisi</h5>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        1a. Penilaian Status Berat Badan (BB/U)
+            <div class="modal-content p-3">
+                <div class="modal-top px-4">
+                    <button type="button" class="ms-auto btn-close rounded-circle border border-3 mb-3 border-dark" data-bs-dismiss="modal" aria-label="Close" style="top: -55px;"></button>
+                </div>
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item me-2" role="presentation">
+                        <button class="nav-link avenir-light py-3 active px-5" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-result" type="button" role="tab" aria-controls="pills-result" aria-selected="true">Hasil Pemeriksaan</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link avenir-light py-3" id="pills-chart-tab" data-bs-toggle="pill" data-bs-target="#pills-chart" type="button" role="tab" aria-controls="pills-chart" aria-selected="false">Chart</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-result" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <!-- ? Hasil Periksa -->
+                        <div class="data-result">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <div class="label-1 avenir-light" style="color: #93b0c8;">Orang Tua / Wali</div>
+                                        <h3 class="title-text fw-bold">Ahmad Sanusi</h3>
                                     </div>
-                                    <div class="detail-main-text">
-                                        10 kg berada di median s.d. (+1 SD), sehingga BB Normal
+                                    <div class="col-12 col-md-6">
+                                        <div class="label-1 avenir-light" style="color: #93b0c8;">Anak</div>
+                                        <h3 class="title-text fw-bold">Randika</h3>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        1b. Penilaian Status Tinggi Badan (TB/U)
+                                <div class="row mt-3">
+                                    <div class="col-12 col-md-4">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">No HP (WhatsApp)</div>
+                                                <div class="detail-main-text">089766675689</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="detail-main-text">
-                                        76 cm berada di (-1 SD) s.d. (Median), sehingga TB Normal
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12 col-md-8">
+                                                <div class="detail-wrapper d-flex">
+                                                    <div>
+                                                        <div class="detail-title">Tanggal Periksa</div>
+                                                        <div class="detail-main-text">Sabtu, 29 Oktober 2021
+                                                            Pkl. 15.20 WIB</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="detail-wrapper d-flex">
+                                                    <div>
+                                                        <div class="detail-title">Umur</div>
+                                                        <div class="detail-main-text">3 Tahun 7 Bulan</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3 mt-3">
+                                                <div class="detail-wrapper d-flex">
+                                                    <div>
+                                                        <div class="detail-title">Berat Badan</div>
+                                                        <div class="detail-main-text">24 kg</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3 mt-3">
+                                                <div class="detail-wrapper d-flex">
+                                                    <div>
+                                                        <div class="detail-title">Tinggi Badan</div>
+                                                        <div class="detail-main-text">120 cm</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 my-3">
+                                        <h5 class="title-text mt-3 fw-bold">1. Penilaian Status Nutrisi</h5>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">1a. Penilaian Status Berat Badan (BB/U)</div>
+                                                <div class="detail-main-text">24 kg berada di atas 3 SD, sehingga Anak dalam kelompok ini mungkin memiliki masalah pertumbuhan, namun akan lebih baik jika di analisa menggunakan perbandingan berat badan terhadap panjang / tinggi atau IMT terhadap umur</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">1b. Penilaian Status Tinggi Badan (TB/U)</div>
+                                                <div class="detail-main-text">120 cm berada di atas 3 SD, sehingga Anak dalam kelompok ini berperawakan tubuh tinggi. Hal ini masih normal, kecuali dalam jumlah yang sangat berlebih, hal tersebut bisa mengindikasikan gangguan endokrin. Diagnosa lebih lanjut jika memiliki kecenderungan ini (contoh : jika orang tua dengan tinggi badan normal memiliki anak dengan tinggi badan berlebih dibandingkan tahapan usianya)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">1c. Penilaian Status Gizi (BB/TB)</div>
+                                                <div class="detail-main-text">berat 24.0kg utk panjang 120.0 cm berada di antara Median s.d 1 SD, sehingga status gizi: Berisiko Gizi Lebih (Titik plot yang berada di atas angka 1 menunjukkan risiko gizi lebih. Jika makin mengarah ke garis Z-skor 2, risiko gizi lebih akan makin meningkat)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 my-3">
+                                        <h5 class="title-text mt-3 fw-bold">2. Menghitung Kebutuhan Kalori</h5>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">2a. Menentukan BB Ideal</div>
+                                                <div class="detail-main-text">Berat badan ideal = median = 22.4 kg</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">2b. Menentukan Height Age</div>
+                                                <div class="detail-main-text">Karena TB = 120.0 cm terletak diantara median kedua usia tersebut Height Age 0 bulan</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">2c. Menentukan RDA (Requirement Daily Allowance)</div>
+                                                <div class="detail-main-text">Karena Height Age 0 bulan, maka diambil RDA 0-1 tahun untuk Laki-Laki, sehingga RDA adalah 110 - 120 kal/kgBB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">2d. Menentukan Kebutuhan Kalori Harian</div>
+                                                <div class="detail-main-text">Kalori: 2464 - 2688 kalori/hari</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 my-3">
+                                        <h5 class="title-text mt-3 fw-bold">3. Saran Susu</h5>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">3a. Menghitung Kebutuhan Kalori Harian dari susu</div>
+                                                <div class="detail-main-text">% kalori dari susu</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input type="range" class="form-range" min="10" max="100" step="10" value="10" id="customRange3">
+                                            <label for="customRange3" class="form-label w-100">
+                                                <div class="d-flex justify-content-between ">
+                                                    <div>10%</div>
+                                                    <div>20%</div>
+                                                    <div>30%</div>
+                                                    <div>40%</div>
+                                                    <div>50%</div>
+                                                    <div>60%</div>
+                                                    <div>70%</div>
+                                                    <div>80%</div>
+                                                    <div>90%</div>
+                                                    <div>100%</div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="h6 title-text">Kalori dari susu <span class="h5 fw-bold title-text">351/hari</span></div>
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <div class="dropdown-container">
+                                                        <select name="dropwdown1" class="form-control result-dropdown">
+                                                            <option value="0">Pilih Kategori</option>
+                                                            <option value="1">0 - 1 Tahun</option>
+                                                            <option value="2">1 - 5 Tahun</option>
+                                                        </select>
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <div class="dropdown-container">
+                                                        <select name="dropwdown1" class="form-control result-dropdown">
+                                                            <option value="0">Pilih Susu</option>
+                                                            <option value="1">PEDIACOMPLETE - 1 kkal/ml</option>
+                                                            <option value="2">PediaSure Classic Milky - 0.83 kkal/ml</option>
+                                                            <option value="3">SGM Eksplor Gain Optigrow - 1 kkal/ml</option>
+                                                            <option value="4">Neocate Junior - 1 kkal/ml</option>
+                                                        </select>
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">Menghitung Kebutuhan gram Infatrini Powder</div>
+                                                <div class="detail-main-text">Kalori per ml: 1.3 kkal/ml <br>
+                                                    mL susu per hari: 568.62 - 620.31 ml/hari</div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="row align-items-center">
+                                                <label class="col-sm-2 col-form-label title-text">Dosis per penyajian</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-auto avenir-light title-text">
+                                                    x sehari
+                                                </div>
+                                                <div class="col-auto avenir-light">
+                                                    <button class="btn btn-add-main rounded py-2">Hitung</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <label class="avenir-light title-text">Dosis per penyajian: <span class="title-text fw-bold">285 - 311 mL/servings</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">Menghitung Kebutuhan Scoop Infatrini Powder</div>
+                                                <div class="detail-main-text">1 scoop: 40 ml <br>
+                                                    Jumlah scoop per saji: 7.11 - 7.75 scoop</div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="row align-items-center">
+                                                <label class="col-sm-2 col-form-label title-text">Saran pembulatan per saji:</label>
+                                                <div class="col-sm-1">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="col-auto avenir-light title-text">
+                                                    scoop
+                                                </div>
+                                                <div class="col-auto avenir-light">
+                                                    <button class="btn btn-add-main rounded py-2">Hitung</button>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label class="avenir-light title-text">Jumlah scoop per hari:<span class="title-text fw-bold"> 2 scoop </span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="detail-wrapper d-flex">
+                                            <div>
+                                                <div class="detail-title">Menghitung kebutuhan untuk 2 minggu</div>
+                                                <div class="detail-main-text">Kebutuhan untuk 2 minggu: 2940 - 3136 gram <br>
+                                                    Jumlah kaleng Blenuten 400gr: 8 - 8 kaleng</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="milk-result">
+                                            <h5 class="title-text fw-bold">Resep</h5>
+                                            <img src="./assets/images/pedia-milk.png" alt="milk" class="img-fluid my-3">
+                                            <h5 class="title-text fw-bold">3 kaleng PediaComplete 400g untuk 2 minggu</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="d-grid">
+                                            <button class="btn btn-wa py-3">
+                                             <i class="fab fa-whatsapp me-3"></i> Kirim Hasil Pemeriksaan ke WhatsApp Pasien
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="d-grid">
+                                            <button class="btn btn-main-alt py-3">
+                                                Simpan Resep
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        1c. Penilaian Status Gizi (BB/TB)
-                                    </div>
-                                    <div class="detail-main-text">
-                                        10 kg berada di (-2 SD) s.d. (+1 SD), sehingga Gizi Baik
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-12 my-3">
-                                <h5 class="title-text fw-bold">2. Menghitung Kebutuhan Kalori</h5>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        2a. Menentukan BB Ideal
-                                    </div>
-                                    <div class="detail-main-text">
-                                        Berat badan ideal = median = 9.7 kg
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        2b. Menentukan Height Age
-                                    </div>
-                                    <div class="detail-main-text">
-                                        Height Age 12-13 bulan, Karena TB = 76 kg terletak di antara kedua nilai umur tersebut
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        2c. Menentukan RDA (Requirement Daily Allowance)
-                                    </div>
-                                    <div class="detail-main-text">
-                                        Karena Height Age 12-13 bulan, maka diambil RDA 1-3 tahun untuk anak Laki-Laki, sehingga RDA adalah 100 kal/kgBB
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        2d. Menentukan Kebutuhan Kalori Harian
-                                    </div>
-                                    <div class="detail-main-text">
-                                        Kalori : 970 kalori/hari
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-12 my-3">
-                                <h5 class="title-text fw-bold">3. Perhitungan Kebutuhan PediaComplete</h5>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        3a. Menghitung Kebutuhan Kalori Harian dari ONS
-                                    </div>
-                                    <div class="detail-main-text">
-                                        Kalori dari ONS : 291 kalori/hari
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 mb-2">
-                                <div class="detail-wrapper">
-                                    <div class="detail-title">
-                                        3b. Menghitung Kebutuhan Scoop
-                                    </div>
-                                    <div class="detail-main-text mb-3">
-                                        3b.1. Menghitung Kebutuhan gram PediaSure
-                                        Kalori per ml 1 kkal/ml
-                                        mL PediaComplete 291 ml/hari
-                                    </div>
-                                    <div class="detail-main-text mb-3">
-                                        3b.2. Menghitung Kebutuhan Scoop PediaComplete
-                                        1 scoop 40 ml
-                                        untuk mendapatkan 291ml ~ 300ml 7,5
-                                        8 scoop = 78,4 g per hari
-                                    </div>
-                                    <div class="detail-main-text mb-3">
-                                        3b.3. Menghitung kebutuhan untuk 2 minggu
-                                        1097,6 gram x 2,744 = 3 kaleng PediaComplete 400g
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <div class="milk-rec">
-                            <h3 class="fw-bold title-text">Resep</h3>
-                            <img src="./assets/images/pedia-milk.png" alt="milk" class="img-fluid my-3">
-                            <h5 class="fw-bold title-text">3 kaleng PediaComplete 400g untuk 2 minggu</h5>
-                        </div>
-                    </div>
+                    <div class="tab-pane fade" id="pills-chart" role="tabpanel" aria-labelledby="pills-chart-tab">...</div>
                 </div>
             </div>
         </div>

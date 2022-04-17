@@ -67,10 +67,12 @@
 
 	.dropdown-container {
 		position: relative;
-		width: 100px;
+		// width: 100px;
 
 		.page-select {
 			border: none;
+			font-size: 13px;
+			font-weight: bold;
 		}
 
 		i {
@@ -78,6 +80,11 @@
 			right: 45px;
 			top: 10px;
 		}
+	}
+
+	.paging-of {
+		font-size: 14px;
+		font-weight: bold;
 	}
 }
 
@@ -96,12 +103,12 @@
 }
 
 .detail-wrapper {
-	border-left: 5px solid $blue-dark;
-	padding-left: 8px;
+	// border-left: 5px solid $blue-dark;
+	// padding-left: 8px;
 
 	.detail-title {
 		color: $gray;
-		@include avenirLight;
+		@include avenirMedium;
 	}
 
 	.detail-main-text {
@@ -109,16 +116,30 @@
 		font-size: 16px;
 		font-weight: 600;
 	}
+
+	&::before {
+		content: '-';
+		background-color: $blue-dark;
+		color: $blue-dark;
+		font-weight: bold;
+		font-size: 10px;
+		margin-right: 8px;
+		border-radius: 10px;
+	}
 }
 
 body {
 	background-color: #ebf7fe;
-	font-family: 'Avenir', sans-serif;
+	font-family: 'Avenir-Medium', sans-serif;
 	overflow-x: hidden;
 }
 
 label {
 	@include avenirMedium;
+}
+
+input, select {
+	color: $black-soft-1!important;
 }
 
 ::placeholder {
@@ -174,7 +195,7 @@ label {
 .btn-main {
 	background-color: $pedia-color;
 	color: $white;
-	font-weight: 600;
+	font-weight: normal;
 	border-radius: 3rem;
 	letter-spacing: 2px;
 
@@ -279,14 +300,18 @@ label {
 			}
 
 			.btn-done-register {
-				background-color: $black-soft-2;
+				background-color: $pedia-color;
 				color: $white;
 				font-weight: 600;
 				border-radius: 3rem;
 				letter-spacing: 2px;
 
 				&:hover {
-					background-color: #1a2357;
+					background-color: #221241;
+				}
+
+				&:disabled {
+					background-color: $black-soft-2;
 				}
 			}
 
@@ -314,10 +339,11 @@ label {
 				font-weight: 500;
 				color: $black-soft-1;
 
-				input {
+				input, select {
 					border-radius: 8px;
 					padding: 10px;
 					border: 1px solid #e6e6e6;
+					color: $black-soft-1;
 
 					&:focus {
 						background-color: #ececec;
@@ -373,7 +399,7 @@ label {
 			height: 97px;
 			border: none;
 			margin: 0 0 10px;
-			border-radius: 1em;
+			border-radius: 8px;
 			width: auto;
 
 			.card-body {
@@ -414,7 +440,7 @@ label {
 			width: 100%;
 			height: auto;
 			border: none;
-			border-radius: 1em;
+			border-radius: 8px;
 
 			.card-body {
 				padding: 2em;
@@ -446,7 +472,7 @@ label {
 		.card {
 			border: none !important;
 			min-height: 500px;
-			padding: 1em;
+			// padding: 1em;
 			border-radius: 8px;
 			.title {
 				color: $gray;
@@ -457,8 +483,9 @@ label {
 			border-top: 1px solid $gray-soft-1;
 
 			table {
-				font-size: 12px;
+				font-size: 14px;
 				font-weight: 500;
+				border-collapse: inherit;
 				th,
 				td {
 					color: $pedia-color;
@@ -657,15 +684,16 @@ label {
 			margin-top: 1em;
 			border-top: 1px solid $gray-soft-1;
 			.table {
+				border-collapse: inherit;
 				th {
-					color: $pedia-color;
-					font-size: 12px;
+					color: $black-soft-1;
+					font-size: 14px;
 					font-weight: 600;
 				}
 
 				td {
-					color: $pedia-color;
-					font-size: 12px;
+					color: $black-soft-1;
+					font-size: 14px;
 					font-weight: 500;
 				}
 				.btn-details {
@@ -740,6 +768,12 @@ label {
 
 		.stats-card {
 			.card {
+				&.active {
+					background-color: $blue-dark;
+					.stats {
+						color: white;
+					}
+				}
 				&:hover {
 					transition: 0.5s ease;
 					background-color: $blue-dark;
@@ -764,6 +798,23 @@ label {
 	.patient-card {
 		h5 {
 			color: $white;
+		}
+	}
+}
+
+// override nav
+.nav-pills {
+	.nav-link {
+		border-radius: 8px;
+		background-color: #F8F7FA;
+		color: $gray;
+		.active {
+			background-color: $blue-dark;
+		}
+	}
+	.show > {
+		.nav-link {
+			background-color: $blue-dark;
 		}
 	}
 }
