@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediasure Nutrition Calculator</title>
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/daterangepicker-custom.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="stylesheet" href="assets/css/custom_dropdown.css">
+    <!-- Font Awesome 5.15 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Daterangepicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+    <!-- SIDEBAR DESKTOP -->
+    <div class="nav-sidebar bg-dark d-none d-md-block">
+        <div class="logo-container">
+            <img src="assets/images/recopedia-violet.png" alt="logo.png">
+        </div>
+        <div class="doc-profile">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="avatar-placeholder">
+                        <img src="assets/images/doctor-pic.png" alt="doc.png">
+                    </div>
+                </div>
+                <div class="col-md-8 px-0 pt-1">
+                    <div class="doc-stats">
+                        <div id="name" class="text-wrap">Dr. Irianda Jatmiko</div>
+                        <div id="no-profesi">321/SKL/231/2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-list" id="parent-li">
+            <div class="main-menu">
+                <h6 class="menu-head ps-3">MENU</h6>
+                <ul>
+                    <a href="index.html">
+                        <li class="menu active-menu">
+                            <i class="fas fa-columns"></i>
+                            Dashboard
+                        </li>
+                    </a>
+                    <a href="patient-list.html">
+                        <li class="menu">
+                            <i class="far fa-user"></i>
+                            Pasien
+                        </li>
+                    </a>
+                    <a href="rx-calc-page.html">
+                        <li class="menu">
+                            <i class="fas fa-calculator"></i>
+                            Kalkulator
+                        </li>
+                    </a>
+                    <a href="video-page.html">
+                        <li class="menu">
+                            <i class="fab fa-youtube"></i>
+                            Video
+                        </li>
+                    </a>
+                    <a href="article-page.html">
+                        <li class="menu">
+                            <i class="fab fa-readme"></i>
+                            Artikel
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="support-menu">
+                <h6 class="menu-head ps-3">BANTUAN</h6>
+                <ul>
+                    <a href="#">
+                        <li class="menu">
+                            <i class="fas fa-user-circle"></i>
+                            Profil
+                        </li>
+                    </a>
+                    <a href="https://id.abbott/">
+                        <li class="menu">
+                            <i class="fas fa-cog"></i>
+                            Abbott Indonesia
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar-footer">
+            <p class="m-0 p-0">
+                © 2021 PT ABBOTT PRODUCTS INDONESIA. ALL RIGHTS RESERVED
+            </p>
+        </div>
+    </div>
+    <!-- END SIDEBAR DESKTOP -->
+
+    <!-- SIDEBAR MOBILE -->
+    <div class="nav-sidebar-mobile d-block d-sm-block d-md-none" id="sidebar-mobile">
+        <div class="p-3 d-none" id="expand-btn">
+            <button type="button" class="btn" id="btn-expand-sidebar" onclick="showNav(this)"><i class="fas fa-bars" style="font-size: 28px; color: #9e9e9e;"></i></button>
+        </div>
+        <div class="doc-profile" id="doc-profile">
+            <div class="row align-items-center">
+                <div class="col-3">
+                    <div class="avatar-placeholder">
+                        <img src="assets/images/doctor-pic.png" alt="doc.png">
+                    </div>
+                </div>
+                <div class="col-9 px-0 pt-1">
+                    <div class="doc-stats d-flex justify-content-evenly">
+                        <div>
+                            <div id="name" class="text-wrap">Dr. Irianda Jatmiko</div>
+                            <div id="no-profesi" class="fw-bold">321/SKL/231/2021</div>
+                        </div>
+                        <button type="button" class="btn" id="btn-toggle-sidebar" onclick="closeNav()"><i class="fas fa-times" style="font-size: 28px; color: #9e9e9e;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu">
+            <ul>
+                <a href="index.html">
+                    <li class="menu active-menu">
+                        <i class="fas fa-columns"></i>
+                        <span>Dashboard</span>
+                    </li>
+                </a>
+                <a href="patient-list.html">
+                    <li class="menu">
+                        <i class="far fa-user"></i>
+                        <span>Pasien</span>
+                    </li>
+                </a>
+                <a href="rx-calc-page.html">
+                    <li class="menu">
+                        <i class="fas fa-calculator"></i>
+                        <span>Kalkulator</span>
+                    </li>
+                </a>
+                <a href="video-page.html">
+                    <li class="menu">
+                        <i class="fab fa-youtube"></i>
+                        <span>Video</span>
+                    </li>
+                </a>
+                <a href="article-page.html">
+                    <li class="menu">
+                        <i class="fab fa-readme"></i>
+                        <span>Artikel</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="support-menu">
+            <h6 class="ps-3 mb-4" id="support-title">SUPPORT</h6>
+            <ul>
+                <a href="#">
+                    <li class="menu">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profil</span>
+                    </li>
+                </a>
+                <a href="#">
+                    <li class="menu">
+                        <i class="fas fa-cog"></i>
+                        <span>Pengaturan</span>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <!-- END SIDEBAR MOBILE -->
+
+    <!-- PAGE CONTENT -->
+    <div class="container-fluid">
+        <div class="page-content" id="page-content">
+            <div class="header-greeting mb-4">
+                <p class="p-0 m-0">
+                    Pediasure RX Calculator
+                </p>
+                <div class="d-flex justify-content-between">
+                    <h1 class="fw-bolder mb-0">Profil</h1>
+                    <button type="button" class="btn btn-add-main px-5">Log Out</button>
+                </div>
+            </div>
+            <div id="profile-section" class="my-5">
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card">
+                            <div class="photo-row">
+                                <div class="photo-profile">
+                                    <img src="./assets//images/doctor-pic-big.png" alt="">
+                                    <i class="border border-white border-4 text-white rounded-circle fas fa-pencil-alt p-1 "></i>
+                                </div>
+                            </div>
+                            <div class="name-row mb-3 mt-2">
+                                <div class="name fw-bold">Dr. Irianda Jatmiko</div>
+                                <div class="id">321/SKL/231/2021</div>
+                            </div>
+                            <div class="data-row border-top">
+                                <div class="p-3">
+                                    <div class="title">Jumlah Pasien</div>
+                                    <div class="title-text">28 Pasien</div>
+                                </div>
+                            </div>
+                            <div class="data-row border-top">
+                                <div class="p-3">
+                                    <div class="title">No HP (WhatsApp)</div>
+                                    <div class="title-text">0890930232</div>
+                                </div>
+                            </div>
+                            <div class="data-row border-top">
+                                <div class="p-3">
+                                    <div class="title">Terakhir Login</div>
+                                    <div class="title-text">Terakhir Login
+                                        Sabtu, 29 Oktober 2021 Pkl. 15.20 WIB</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="card p-3">
+                            <form action="#" id="profile-form">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Nama Depan</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1" value="Irianda">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput2" class="form-label">Nama Belakang</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput2" value="Jatmiko">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput3" class="form-label">Nomor HP</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput3" value="0890930232">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput4" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="exampleFormControlInput4" value="iriandajatmiko@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput5" class="form-label">NPA</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput5" value="321/SKL/231/2021">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput6" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="exampleFormControlInput6" value="Irianda">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput7" class="form-label">NPA</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput7" value="321/SKL/231/2021">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput8" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="exampleFormControlInput8" value="Irianda">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 my-2 mt-md-4">
+                                       <button type="submit" class="btn btn-add-main px-5">Simpan Perubahan</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CHART Placeholde -->
+
+            <!-- END CHART Placeholde -->
+        </div>
+    </div>
+
+    <!-- END PAGE CONTENT -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

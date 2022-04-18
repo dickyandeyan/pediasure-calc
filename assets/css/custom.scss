@@ -713,6 +713,69 @@ input, select {
 	}
 }
 
+#profile-section {
+   .card {
+      border: none;
+      border-radius: 8px;
+      min-height: 500px;
+   }
+
+   .photo-row {
+      display: flex;
+      justify-content: center;
+      padding: 1em;
+
+      .photo-profile {
+         height: 123px;
+         width: 123px;
+         border-radius: 100%;
+         position: relative;
+
+         i {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            background-color: $blue-dark;
+         }
+      }
+   }
+
+   .name-row {
+      text-align: center;
+      .name {
+         font-size: 20px;
+         color: $black-soft-1
+      }
+
+      .id {
+         margin-top: 6px;
+         font-size: 16px;
+         @include avenirMedium;
+      }
+   }
+
+   .data-row{
+      .title {
+         color: $gray;
+         font-size: 14px;
+      }
+
+      .title-text {
+         font-size: 16px;
+         font-weight: 600;
+      }
+   }
+
+   #profile-form {
+      input {
+         padding: 8px;
+         border-radius: 8px;
+         border: 1px solid $gray-soft-1;
+         color: $black-soft-1;
+      }
+   }
+}
+
 #resultModal {
 	.data-result {
 		max-height: 500px;
