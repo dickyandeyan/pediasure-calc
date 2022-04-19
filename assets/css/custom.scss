@@ -88,6 +88,10 @@
 	}
 }
 
+.rounded-default {
+   border-radius: 8px;
+}
+
 .rounded-1 {
 	@include rounded-1;
 }
@@ -772,6 +776,30 @@ input, select {
          border-radius: 8px;
          border: 1px solid $gray-soft-1;
          color: $black-soft-1;
+      }
+   }
+}
+
+#photoUpload {
+   .photo-placeholder {
+      border-radius: 8px;
+      border: 2px dashed $gray;
+      background-color: $gray-soft-2;
+      min-height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .btn-disabled {
+      background-color: $gray-soft-2;
+      border-radius: 2em;
+      color: $gray;
+      font-size: 14px;
+
+      &:hover {
+         background-color: $gray;
+         color: $gray-soft-1;
       }
    }
 }

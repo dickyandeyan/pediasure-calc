@@ -56,6 +56,10 @@
   font-weight: bold;
 }
 
+.rounded-default {
+  border-radius: 8px;
+}
+
 .rounded-1 {
   border-radius: 18px;
   border: none;
@@ -661,6 +665,26 @@ input, select {
   border-radius: 8px;
   border: 1px solid #e4e4e4;
   color: #2b3674;
+}
+
+#photoUpload .photo-placeholder {
+  border-radius: 8px;
+  border: 2px dashed #93b0c8;
+  background-color: #e9edf7;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#photoUpload .btn-disabled {
+  background-color: #e9edf7;
+  border-radius: 2em;
+  color: #93b0c8;
+  font-size: 14px;
+}
+#photoUpload .btn-disabled:hover {
+  background-color: #93b0c8;
+  color: #e4e4e4;
 }
 
 #resultModal .data-result {
